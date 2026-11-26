@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forno &amp; Lenha Alimentos | Mel direto da Serra Catarinense</title>
+<meta name="description" content="Mel Silvestre, Silvestre Orgânico e Melato da Bracatinga direto de Santa Catarina. Bisnagas de 250g e 500g e potes de 500g e 1kg. Peça pelo WhatsApp e receba em todo o Brasil.">
+<meta property="og:title" content="Forno &amp; Lenha | Mel direto da Serra Catarinense">
+<meta property="og:description" content="Silvestre, Orgânico e o raro Melato da Bracatinga. Peça pelo WhatsApp e receba em todo o Brasil.">
+<meta property="og:image" content="img/og.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#FFC61A">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;0,9..144,900;1,9..144,400;1,9..144,600&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+body{margin:0;background:#FFF8EA;font-family:'Lexend',system-ui,sans-serif;color:#2B1A0E}
+a{color:#A81C22}a:hover{color:#7E1218}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+.sec{scroll-margin-top:88px}
+.serif{font-family:'Fraunces',Georgia,serif}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 26px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;border:0;cursor:pointer;font-family:'Lexend',sans-serif;transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-red{background:#D3262E;color:#FFFFFF;box-shadow:0 10px 24px rgba(211,38,46,.32)}
+.btn-red:hover{background:#B81F27;color:#FFFFFF}
+.btn-yellow{background:#FFC61A;color:#2B1A0E;box-shadow:0 10px 24px rgba(255,198,26,.35)}
+.btn-yellow:hover{background:#FFD447;color:#2B1A0E}
+.btn-dark{background:#2B1A0E;color:#FFF8EA}
+
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:55;display:flex;align-items:center;gap:10px;text-decoration:none}
+.wa-float .wa-bub{width:62px;height:62px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(0,0,0,.28);transition:transform .15s ease;animation:wapulse 2.6s ease-out infinite}
+.wa-float:hover .wa-bub{transform:scale(1.07)}
+.wa-float .wa-tip{background:#fff;color:#2B1A0E;font-weight:600;font-size:14px;padding:10px 14px;border-radius:16px 16px 4px 16px;box-shadow:0 10px 26px rgba(0,0,0,.18);font-family:'Lexend',sans-serif}
+@keyframes wapulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55),0 12px 28px rgba(0,0,0,.28)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0),0 12px 28px rgba(0,0,0,.28)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0),0 12px 28px rgba(0,0,0,.28)}}
+@media (max-width:600px){.wa-float{right:14px;bottom:14px}.wa-float .wa-bub{width:56px;height:56px}.wa-float .wa-tip{display:none}}
+@media (prefers-reduced-motion:reduce){.wa-float .wa-bub{animation:none}}
+.field{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600;color:#4A2A10}
+.field input{min-height:50px;border:2px solid #EAD9B8;border-radius:14px;padding:0 16px;font-size:17px;font-family:'Lexend',sans-serif;background:#fff;color:#2B1A0E;outline:none}
+.field input:focus{border-color:#D3262E}
+.field small{font-weight:400;color:#6B4A2E;font-size:13px;min-height:16px}
+.btn-dark:hover{background:#4A2E18;color:#FFF8EA}
+.btn-line{background:transparent;color:#2B1A0E;border:2px solid #2B1A0E}
+.btn-line:hover{background:#2B1A0E;color:#FFF8EA}
+.btn-ghost{background:transparent;color:#FFF8EA;border:2px solid rgba(255,248,234,.6)}
+.btn-ghost:hover{border-color:#FFF8EA;color:#FFF8EA}
+.navlink{color:#2B1A0E;text-decoration:none;font-weight:500;font-size:15px;padding:9px 16px;border-radius:999px;transition:background .2s ease,box-shadow .2s ease,color .2s ease}
+.navlink:hover,.navlink:focus-visible{color:#A81C22;background:rgba(211,38,46,.12);box-shadow:0 6px 18px rgba(168,28,34,.18);outline:none}
+.pill{min-height:44px;padding:0 14px;border-radius:12px;border:2px solid #EAD9B8;background:#FFFFFF;font:500 14px 'Lexend',sans-serif;color:#4A3220;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.15}
+.pill.on{border-color:#2B1A0E;background:#2B1A0E;color:#FFF8EA}
+.pill small{font-size:12px;opacity:.8;font-weight:400}
+.tab{min-height:44px;padding:0 16px;border-radius:999px;border:2px solid #EAD9B8;background:transparent;font:500 14px 'Lexend',sans-serif;color:#4A3220;cursor:pointer}
+.tab.on{background:#D3262E;border-color:#D3262E;color:#FFFFFF}
+.dot{width:14px;height:14px;border-radius:50%;background:#F1E3C6}
+.dot.on{background:#F2A900}
+.seg{flex:1;height:6px;border-radius:3px;background:rgba(255,248,234,.2)}
+.seg.on{background:#FFC61A}
+.seg-l{background:#EAD9B8}
+.seg-l.on{background:#D3262E}
+.qopt{width:100%;text-align:left;min-height:64px;padding:16px 22px;border-radius:18px;border:2px solid #EAD9B8;background:#FFFFFF;font:500 17px 'Lexend',sans-serif;color:#2B1A0E;cursor:pointer;display:flex;align-items:center;gap:14px;transition:all .15s ease}
+.qopt:hover{border-color:#D3262E;transform:translateX(4px)}
+.stepbtn{display:flex;flex-direction:column;align-items:center;gap:10px;background:transparent;border:0;cursor:pointer;color:#E9D7B5;font:500 14px 'Lexend',sans-serif;padding:8px;min-width:96px}
+.stepbtn .ring{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid rgba(255,248,234,.3);transition:all .2s ease}
+.stepbtn.on{color:#FFF8EA}
+.stepbtn.on .ring{background:#FFC61A;border-color:#FFC61A;color:#2B1A0E;transform:scale(1.08)}
+.flipcard{position:relative;min-height:250px;border-radius:24px;border:0;cursor:pointer;text-align:left;padding:28px;display:flex;flex-direction:column;justify-content:space-between;font-family:'Lexend',sans-serif;transition:transform .25s ease,background .25s ease}
+.flipcard:hover{transform:translateY(-4px) rotate(-.6deg)}
+.flip-front{background:#FFFFFF;color:#2B1A0E;box-shadow:0 1px 0 #EAD9B8,0 10px 30px rgba(60,36,12,.08)}
+.flip-back{background:#D3262E;color:#FFFFFF}
+.faqbtn{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;background:transparent;border:0;border-bottom:1px solid #EAD9B8;padding:22px 0;font:600 19px 'Fraunces',serif;color:#2B1A0E;text-align:left;cursor:pointer}
+.card-lift{transition:transform .2s ease,box-shadow .2s ease}
+.card-lift:hover{transform:translateY(-6px);box-shadow:0 26px 50px rgba(60,36,12,.16)}
+.qtybtn{width:44px;height:44px;border-radius:50%;border:2px solid #EAD9B8;background:#FFFFFF;cursor:pointer;font:700 20px 'Lexend',sans-serif;color:#2B1A0E;display:flex;align-items:center;justify-content:center}
+.qtybtn:hover{border-color:#2B1A0E}
+.iconbtn{width:48px;height:48px;border-radius:50%;border:0;background:transparent;cursor:pointer;color:#2B1A0E;display:flex;align-items:center;justify-content:center}
+.photo-zoom{transition:transform .6s ease}
+.photo-card:hover .photo-zoom{transform:scale(1.06)}
+@keyframes drip{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.35)}}
+@keyframes fall{0%{transform:translateY(0);opacity:0}10%{opacity:1}80%{opacity:1}100%{transform:translateY(140px);opacity:0}}
+@keyframes floaty{0%,100%{transform:translate(0,0) rotate(-4deg)}50%{transform:translate(18px,-14px) rotate(4deg)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes pop{0%{transform:translate(-50%,20px);opacity:0}100%{transform:translate(-50%,0);opacity:1}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes swap{0%{opacity:0;transform:translateY(10px) scale(.96)}100%{opacity:1;transform:none}}
+.drip{transform-origin:top;animation:drip 4s ease-in-out infinite}
+.drip2{animation-delay:1.3s}.drip3{animation-delay:2.4s}
+.drop{animation:fall 3.6s ease-in infinite}
+.drop2{animation-delay:1.4s}.drop3{animation-delay:2.6s}
+.bee{animation:floaty 5s ease-in-out infinite}
+.jar1{animation:bob 6s ease-in-out infinite}
+.jar2{animation:bob 6s ease-in-out infinite;animation-delay:.8s}
+.jar3{animation:bob 6s ease-in-out infinite;animation-delay:1.6s}
+.spin{animation:spin 26s linear infinite}
+.toast{animation:pop .3s ease-out}
+.swap{animation:swap .35s ease-out}
+.hero-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;align-items:center}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;align-items:center}
+.sizes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.navlinks{display:flex;gap:6px;align-items:center}
+.cmp{display:grid;grid-template-columns:180px repeat(3,minmax(0,1fr))}
+.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.gallery>a{aspect-ratio:800/778}
+@media (max-width:1000px){.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}.grid3{grid-template-columns:1fr}.hero-grid,.grid2{grid-template-columns:1fr}.navlinks{order:3;width:100%;overflow-x:auto;gap:4px;white-space:nowrap;padding:2px 0 6px;scrollbar-width:none}.navlinks::-webkit-scrollbar{display:none}.sec{scroll-margin-top:124px}header nav.wrap{row-gap:0!important;padding-top:6px!important;padding-bottom:0!important}.navlink{padding:7px 12px!important;font-size:14px!important}.gallery{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.grid4{grid-template-columns:1fr}.cmp{grid-template-columns:110px repeat(3,minmax(140px,1fr))}.sizes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+.wrap{max-width:1280px;margin:0 auto}
+img{max-width:100%}
+.eyebrow{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:#A81C22;font-weight:700}
+.h2{margin:0;font-family:'Fraunces',Georgia,serif;font-size:clamp(34px,4.4vw,58px);line-height:1.04;letter-spacing:-.02em;font-weight:900}
+.h2 em{font-style:italic;font-weight:400;color:#A81C22}
+.badge-chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.65);font-size:14px;font-weight:500}
+.hidden{display:none!important}
+@media (max-width:1000px){.hero-art{height:420px!important}.hero-art .j-side{height:240px!important}.hero-art .j-main{height:310px!important}.quiz-lenha{display:none}}
+@media (max-width:600px){.gallery{grid-template-columns:1fr 1fr;gap:10px}.gallery span{font-size:12px!important;padding:6px 10px!important;left:8px!important;bottom:8px!important}.price-tag{top:0!important}}
+</style>
+</head>
+<body>
+<div style="width:100%;min-height:100vh;background:#FFF8EA;position:relative;overflow-x:clip">
+
+<header style="position:sticky;top:0;z-index:40;background:rgba(255,198,26,.97);backdrop-filter:blur(10px);border-bottom:3px solid #D3262E">
+<nav class="wrap" style="padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap" aria-label="Principal">
+<a href="#topo" aria-label="Forno &amp; Lenha Alimentos, início" style="display:flex;align-items:center"><img src="img/logo.png" alt="Forno &amp; Lenha Alimentos" style="height:68px;width:auto;display:block;filter:drop-shadow(0 3px 6px rgba(120,40,10,.25))"></a>
+<div class="navlinks">
+<a class="navlink" href="#loja">Nossos méis</a><a class="navlink" href="#quiz">Qual é o seu?</a><a class="navlink" href="#jornada">Da flor ao pote</a><a class="navlink" href="#receitas">Receitas</a><a class="navlink" href="#curiosidades">Curiosidades</a>
+</div>
+<button class="btn btn-red" data-action="open-cart" aria-label="Abrir carrinho" style="min-height:46px;padding:0 18px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6 5 3H2"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>
+<span>Carrinho</span>
+<span class="cart-count" style="background:#FFC61A;color:#2B1A0E;border-radius:999px;min-width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;padding:0 7px;font-weight:700">0</span>
+</button>
+</nav>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="topo" class="sec" style="position:relative;background:radial-gradient(ellipse at 72% 45%,#FFD95E 0%,#FFC61A 45%,#F2A900 100%);overflow:hidden">
+<svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.16" aria-hidden="true"><defs><pattern id="hex" width="56" height="97" patternUnits="userSpaceOnUse" patternTransform="scale(.9)"><path d="M28 0 L56 16 L56 48 L28 64 L0 48 L0 16 Z M28 64 L28 97" fill="none" stroke="#B87400" stroke-width="1.6"/></pattern></defs><rect width="100%" height="100%" fill="url(#hex)"/></svg>
+<div class="wrap hero-grid" style="position:relative;padding:72px 24px 150px">
+<div style="display:flex;flex-direction:column;gap:26px;position:relative;z-index:2">
+<span style="align-self:flex-start;display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:#D3262E;color:#fff;font-size:14px;font-weight:600">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Direto da Serra Catarinense</span>
+<h1 class="serif" style="margin:0;font-size:clamp(44px,6.2vw,88px);line-height:.96;font-weight:900;letter-spacing:-.03em">Mel de verdade,<br><span style="font-style:italic;font-weight:400;color:#A81C22">direto da serra</span><br>para você.</h1>
+<p style="margin:0;font-size:19px;line-height:1.6;color:#4A2A10;max-width:520px">Silvestre, Silvestre Orgânico e o raro Melato da Bracatinga. Méis puros de Santa Catarina, de uma empresa de família, com entrega em todo o Brasil.</p>
+<div style="display:flex;flex-wrap:wrap;gap:14px">
+<a class="btn btn-red" href="#loja">Quero meu mel <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+<a class="btn btn-line" href="#quiz">Qual combina comigo?</a>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:4px">
+<span class="badge-chip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A81C22" stroke-width="2.2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Selo ARTE</span>
+<span class="badge-chip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A81C22" stroke-width="2.2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Produto Catarinense</span>
+<span class="badge-chip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A81C22" stroke-width="2.2" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg>Entrega em todo o Brasil</span>
+</div>
+</div>
+<div class="hero-art" style="position:relative;height:560px;display:flex;align-items:flex-end;justify-content:center">
+<div class="spin" style="position:absolute;left:50%;top:46%;width:480px;height:480px;margin:-240px 0 0 -240px;border-radius:50%;border:3px dashed rgba(168,28,34,.35)"></div>
+<div style="position:absolute;left:50%;top:46%;width:400px;height:400px;margin:-200px 0 0 -200px;border-radius:50%;background:radial-gradient(circle,#FFF3C4 0%,rgba(255,243,196,0) 70%)"></div>
+<img class="bee" src="img/abelha-lenha.webp" alt="" aria-hidden="true" style="position:absolute;pointer-events:none;z-index:3;top:10px;right:20px;width:120px;height:auto">
+<img class="jar1 j-side" src="img/organico-pote500.webp" alt="Mel Silvestre Orgânico pote 500g" style="position:relative;z-index:1;height:330px;margin-right:-46px;margin-bottom:30px;filter:drop-shadow(0 24px 30px rgba(90,40,0,.35))">
+<img class="jar2 j-main" src="img/silvestre-pote500.webp" alt="Mel Silvestre pote 500g" style="position:relative;z-index:2;height:420px;filter:drop-shadow(0 30px 36px rgba(90,40,0,.4))">
+<img class="jar3 j-side" src="img/melato-pote500.webp" alt="Mel de Melato da Bracatinga pote 500g" style="position:relative;z-index:1;height:330px;margin-left:-46px;margin-bottom:30px;filter:drop-shadow(0 24px 30px rgba(90,40,0,.35))">
+<div class="price-tag" style="position:absolute;left:0;top:40px;z-index:3;background:#fff;border-radius:18px;padding:12px 16px;box-shadow:0 14px 30px rgba(90,40,0,.2);display:flex;flex-direction:column;gap:2px;transform:rotate(-4deg)"><span style="font-size:12px;color:#7A5A3A;font-weight:500">a partir de</span><span class="serif" style="font-size:30px;font-weight:900;color:#A81C22;line-height:1">R$ 24,50</span></div>
+</div>
+</div>
+<svg style="position:absolute;left:0;bottom:-1px;width:100%;height:120px" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120 L0 60 Q120 40 240 60 T480 60 T720 60 T960 60 T1200 60 T1440 60 L1440 120 Z" fill="#D3262E"/><path d="M0 120 L0 76 Q120 58 240 76 T480 76 T720 76 T960 76 T1200 76 T1440 76 L1440 120 Z" fill="#FFF8EA"/></svg>
+<svg style="position:absolute;left:0;bottom:-60px;width:100%;height:160px;pointer-events:none;z-index:3" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true"><rect class="drip" x="214" y="0" width="22" height="70" rx="11" fill="#D3262E"/><rect class="drip drip2" x="640" y="0" width="18" height="96" rx="9" fill="#D3262E"/><rect class="drip drip3" x="1080" y="0" width="24" height="60" rx="12" fill="#D3262E"/><circle class="drop" cx="649" cy="100" r="9" fill="#D3262E"/><circle class="drop drop2" cx="225" cy="76" r="10" fill="#D3262E"/><circle class="drop drop3" cx="1092" cy="66" r="11" fill="#D3262E"/></svg>
+</section>
+
+<!-- GALERIA -->
+<section style="padding:72px 24px 30px">
+<div class="wrap" style="display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px">
+<h2 class="h2" style="font-size:clamp(32px,3.8vw,50px);position:relative">Tem mel pra <em>todo momento</em>.<img class="bee" src="img/abelha-lenha.webp" alt="" aria-hidden="true" style="position:absolute;pointer-events:none;z-index:3;top:-46px;right:-70px;width:64px;height:auto"></h2>
+<span style="color:#6B4A2E;font-size:16px">Bisnaga para o dia a dia, pote para a família.</span>
+</div>
+<div class="gallery">
+<a href="#loja" class="photo-card" style="position:relative;border-radius:26px;overflow:hidden;display:block"><img class="photo-zoom" src="img/cena-pote1kg.jpg" alt="Potes de 1kg dos três méis Forno &amp; Lenha com favo de mel e a serra ao fundo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:18px;bottom:18px;background:#fff;color:#2B1A0E;padding:10px 16px;border-radius:999px;font-weight:600;font-size:15px">Pote 1kg</span></a>
+<a href="#loja" class="photo-card" style="position:relative;border-radius:26px;overflow:hidden;display:block"><img class="photo-zoom" src="img/cena-pote500.jpg" alt="Potes de 500g com pão, iogurte e favo" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:14px;bottom:14px;background:#fff;color:#2B1A0E;padding:8px 14px;border-radius:999px;font-weight:600;font-size:14px">Pote 500g</span></a>
+<a href="#loja" class="photo-card" style="position:relative;border-radius:26px;overflow:hidden;display:block"><img class="photo-zoom" src="img/cena-bis250.jpg" alt="Bisnagas de 250g na mesa do café" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:14px;bottom:14px;background:#fff;color:#2B1A0E;padding:8px 14px;border-radius:999px;font-weight:600;font-size:14px">Bisnaga 250g</span></a>
+<a href="#loja" class="photo-card" style="position:relative;border-radius:26px;overflow:hidden;display:block"><img class="photo-zoom" src="img/cena-bis500.jpg" alt="Bisnagas de 500g com café e favos" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:14px;bottom:14px;background:#fff;color:#2B1A0E;padding:8px 14px;border-radius:999px;font-weight:600;font-size:14px">Bisnaga 500g</span></a>
+</div>
+</div>
+</section>
+
+<!-- LOJA -->
+<section id="loja" class="sec" style="padding:80px 24px 100px">
+<div class="wrap" style="display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px">
+<div style="display:flex;flex-direction:column;gap:14px;max-width:660px"><span class="eyebrow">Nossos méis</span><h2 class="h2">Escolha o mel. <em>Escolha o tamanho.</em></h2></div>
+<p style="margin:0;max-width:400px;color:#6B4A2E;font-size:17px;line-height:1.55">Toque no tamanho para ver a embalagem e o preço. Nas abas, descubra o sabor e o que combina.</p>
+</div>
+<div class="grid3" id="products"></div>
+<div style="display:flex;align-items:center;gap:22px;background:#FFC61A;border-radius:26px;padding:18px 26px 18px 18px;flex-wrap:wrap;border:3px solid #D3262E">
+<img class="jar1" src="img/lenha-hd.png" alt="Lenha, o mascote da Forno &amp; Lenha" style="height:190px;width:auto;margin:-40px 0 -10px 6px;filter:drop-shadow(0 10px 14px rgba(120,30,0,.3))">
+<div style="display:flex;flex-direction:column;gap:6px;flex:1;min-width:240px"><span class="serif" style="font-size:24px;font-weight:900;color:#A81C22">Dica do Lenha</span><span style="font-size:16px;line-height:1.55">Ficou na dúvida? Leva o trio em bisnaga de 250g e faz uma degustação em casa: começa pelo Orgânico, passa pelo Silvestre e termina no Melato. A diferença aparece na primeira colherada.</span></div>
+<div style="display:flex;flex-direction:column;align-items:flex-start;gap:8px"><span style="font-size:14px;color:#4A2A10">Trio 250g: <strong id="trio-price"></strong></span><button class="btn btn-dark" data-action="add-trio">Levar o trio</button></div>
+</div>
+</div>
+</section>
+
+<!-- AVALIAÇÕES -->
+<section id="avaliacoes" class="sec" style="padding:20px 24px 100px">
+<div class="wrap" style="display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px;position:relative">
+<div style="display:flex;flex-direction:column;gap:12px;position:relative"><span class="eyebrow">Quem provou, conta</span><h2 class="h2">O que dizem <em>na mesa</em> dos clientes</h2><img class="bee" src="img/abelha-lenha.webp" alt="" aria-hidden="true" style="position:absolute;pointer-events:none;z-index:3;top:-24px;left:250px;width:58px;height:auto"></div>
+<span id="rev-summary" style="color:#6B4A2E;font-size:16px"></span>
+</div>
+<div class="grid3" id="reviews"></div>
+<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:#fff;border-radius:22px;padding:20px 24px;box-shadow:0 1px 0 #EAD9B8,0 10px 30px rgba(60,36,12,.06)">
+<span style="font-size:16px;line-height:1.5;max-width:560px">Já provou nosso mel? Conta pra gente como foi. Sua avaliação pode aparecer aqui.</span>
+<div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-red" id="rev-wa" href="#" target="_blank" rel="noopener">Avaliar pelo WhatsApp</a><a class="btn btn-line" href="https://instagram.com/fornoelenha.alimentos" target="_blank" rel="noopener">Marcar no Instagram</a></div>
+</div>
+</div>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz" class="sec" style="padding:100px 24px;background:#FFC61A;position:relative;overflow:hidden">
+<svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.14" aria-hidden="true"><rect width="100%" height="100%" fill="url(#hex)"/></svg>
+<div style="position:relative;max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:14px;text-align:center;align-items:center"><span class="eyebrow">Teste de 30 segundos</span><h2 class="h2">Qual mel tem a <em>sua cara</em>?</h2><p style="margin:0;color:#4A2A10;font-size:17px">Três perguntas e o Lenha te diz qual levar.</p></div>
+<div style="position:relative">
+<img class="jar3 quiz-lenha" src="img/lenha-hd.png" alt="" aria-hidden="true" style="position:absolute;right:-40px;top:-150px;height:170px;width:auto;transform:rotate(10deg);z-index:0">
+<div id="quiz-box" style="position:relative;z-index:1;background:#fff;border-radius:28px;padding:clamp(24px,4vw,44px);box-shadow:0 24px 60px rgba(120,60,0,.18);display:flex;flex-direction:column;gap:26px"></div>
+</div>
+</div>
+</section>
+
+<!-- JORNADA -->
+<section id="jornada" class="sec" style="padding:110px 24px;background:#2B1A0E;color:#FFF8EA">
+<div style="max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:44px">
+<div style="display:flex;flex-direction:column;gap:14px;max-width:720px"><span class="eyebrow" style="color:#FFC61A">Da flor ao pote</span><h2 class="h2">A viagem de cada gota, <em style="color:#FFC61A">passo a passo</em>.</h2></div>
+<div id="steps" style="display:flex;gap:6px;overflow-x:auto;padding-bottom:6px"></div>
+<div id="step-segs" style="display:flex;gap:8px"></div>
+<div class="grid2">
+<div style="display:flex;flex-direction:column;gap:18px">
+<span id="step-n" style="font-size:14px;color:#FFC61A;font-weight:700;letter-spacing:.1em;text-transform:uppercase"></span>
+<h3 id="step-title" class="serif" style="margin:0;font-size:clamp(30px,3.4vw,44px);line-height:1.08;font-weight:800"></h3>
+<p id="step-text" style="margin:0;font-size:18px;line-height:1.65;color:#EADBC0"></p>
+<div style="display:flex;gap:12px;margin-top:8px;flex-wrap:wrap">
+<button class="btn btn-ghost" data-action="prev-step"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Anterior</button>
+<button class="btn btn-yellow" data-action="next-step"><span id="next-label">Próxima etapa</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+</div>
+</div>
+<div id="step-art" style="aspect-ratio:4/3;border-radius:28px;background:radial-gradient(circle at 50% 45%,#FFD447 0%,#F2A900 75%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden"></div>
+</div>
+</div>
+</section>
+
+<!-- RECEITAS -->
+<section id="receitas" class="sec" style="padding:110px 24px">
+<div class="wrap" style="display:flex;flex-direction:column;gap:36px">
+<div style="display:flex;align-items:flex-end;gap:28px;flex-wrap:wrap">
+<div style="position:relative;flex-shrink:0"><img class="jar2" src="img/lenha-chef.png" alt="Chef Lenha, o mascote de chapéu de cozinheiro" style="height:270px;width:auto;filter:drop-shadow(0 16px 20px rgba(90,40,0,.25))"><img class="bee" src="img/abelha-lenha.webp" alt="" aria-hidden="true" style="position:absolute;pointer-events:none;z-index:3;top:-10px;right:-50px;width:62px;height:auto"></div>
+<div style="display:flex;flex-direction:column;gap:12px;max-width:720px;flex:1;min-width:280px">
+<span style="display:inline-flex;align-self:flex-start;padding:8px 14px;border-radius:16px 16px 16px 4px;background:#FFC61A;font-weight:600;font-size:15px">Chef Lenha recomenda</span>
+<span class="eyebrow">Na cozinha</span>
+<h2 class="h2">Receitas para <em>lamber</em> a colher</h2>
+<p style="margin:0;color:#6B4A2E;font-size:17px;line-height:1.55">Do café da manhã ao jantar. Cada receita indica qual dos nossos méis deixa o prato no ponto.</p>
+</div>
+</div>
+<div id="filters" style="display:flex;gap:10px;flex-wrap:wrap"></div>
+<div class="grid3" id="recipes" style="align-items:start"></div>
+</div>
+</section>
+
+<!-- ORIGEM -->
+<section id="historia" class="sec" style="padding:110px 24px">
+<div class="grid2" style="max-width:1180px;margin:0 auto">
+<div style="position:relative"><div style="border-radius:32px;overflow:hidden;aspect-ratio:1/1"><img src="img/cena-pote1kg.jpg" alt="Serra catarinense com os potes Forno &amp; Lenha" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:20% 50%;display:block"></div><img src="img/logo.png" alt="" aria-hidden="true" style="position:absolute;right:-14px;bottom:-22px;width:170px;height:auto;filter:drop-shadow(0 14px 22px rgba(60,20,0,.35));transform:rotate(-6deg)"></div>
+<div style="display:flex;flex-direction:column;gap:22px">
+<span class="eyebrow">Nossa origem</span>
+<h2 class="h2" style="font-size:clamp(34px,4.2vw,56px)">Santa Catarina <em>dentro</em> de um pote.</h2>
+<p style="margin:0;font-size:18px;line-height:1.65;color:#4A3220">Santa Catarina é terra de mata atlântica, araucárias, serra fria e uma diversidade de flores que vira mel de sabor complexo. É lá que nasce o mel da Forno &amp; Lenha, para chegar até São Paulo, e até você, com o selo de Produto Catarinense no rótulo.</p>
+<p style="margin:0;font-size:18px;line-height:1.65;color:#4A3220">Somos uma empresa de família: pai e filho tocando juntos o negócio, com o cuidado de quem coloca o próprio nome no pote. E o Lenha, nosso mascote de bigode e cabeça em chamas, garante que cada rótulo saia com a cara da casa.</p>
+<div style="display:flex;flex-direction:column;gap:12px;background:#fff;border-radius:22px;padding:24px;box-shadow:0 1px 0 #EAD9B8">
+<span class="serif" style="font-size:22px;font-weight:800">O tesouro da serra: o Melato da Bracatinga</span>
+<p style="margin:0;font-size:16px;line-height:1.6;color:#4A3220">Ele não nasce de flores. Na casca da bracatinga, árvore nativa do Planalto Sul, vive um pequeno inseto, a cochonilha, que se alimenta da seiva e solta gotinhas açucaradas: o melato. As abelhas coletam esse néctar diferente e transformam tudo num mel escuro, encorpado e rico em minerais.</p>
+<p style="margin:0;font-size:16px;line-height:1.6;color:#4A3220">Desde 2021, o Melato da Bracatinga do Planalto Sul Brasileiro tem Denominação de Origem reconhecida pelo INPI.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- COMPARATIVO -->
+<section id="comparar" class="sec" style="padding:10px 24px 110px">
+<div style="max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px"><span class="eyebrow">Lado a lado</span><h2 class="h2" style="font-size:clamp(32px,3.8vw,48px)">Do mais claro ao mais escuro</h2></div>
+<div style="height:28px;border-radius:999px;background:linear-gradient(90deg,#FFD95E 0%,#F2A900 30%,#C46A0A 60%,#6A3410 82%,#2A1608 100%);position:relative"><span style="position:absolute;left:22%;top:-8px;width:4px;height:44px;background:#2B1A0E;border-radius:2px"></span><span style="position:absolute;left:38%;top:-8px;width:4px;height:44px;background:#2B1A0E;border-radius:2px"></span><span style="position:absolute;left:88%;top:-8px;width:4px;height:44px;background:#FFF8EA;border-radius:2px;box-shadow:0 0 0 1px #2B1A0E"></span></div>
+<div style="display:flex;justify-content:space-between;font-size:14px;color:#6B4A2E;margin-top:-18px"><span>Claro e suave</span><span>Escuro e intenso</span></div>
+<div style="overflow-x:auto;border-radius:24px;background:#fff;box-shadow:0 1px 0 #EAD9B8,0 12px 34px rgba(60,36,12,.06)"><div class="cmp" id="cmp" style="min-width:640px"></div></div>
+</div>
+</section>
+
+<!-- REVENDA -->
+<section id="revenda" class="sec" style="padding:0 24px 110px">
+<div style="max-width:1180px;margin:0 auto;border-radius:32px;background:#D3262E;color:#fff;padding:clamp(32px,5vw,60px);display:flex;flex-wrap:wrap;gap:32px;align-items:center;justify-content:space-between;position:relative;overflow:hidden">
+<svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.12" aria-hidden="true"><rect width="100%" height="100%" fill="url(#hex)"/></svg>
+<div style="display:flex;flex-direction:column;gap:14px;max-width:620px;position:relative">
+<span class="eyebrow" style="color:#FFD9DB">Para empórios, mercados e cafés</span>
+<h2 class="h2" style="font-size:clamp(32px,3.8vw,48px)">Venda Forno &amp; Lenha na sua loja.</h2>
+<p style="margin:0;font-size:18px;line-height:1.6;color:#FFE9EA">Quatro embalagens, três méis e um mascote que chama atenção na prateleira. Atendemos revendedores com tabela especial.</p>
+<a class="btn btn-yellow wa-revenda" href="#" target="_blank" rel="noopener" style="align-self:flex-start;margin-top:6px">Quero a tabela de revenda</a>
+</div>
+<div style="position:relative;display:flex;align-items:flex-end">
+<img src="img/silvestre-bis250.webp" alt="Bisnaga Silvestre 250g" loading="lazy" style="height:200px;margin-right:-20px;filter:drop-shadow(0 16px 20px rgba(0,0,0,.35))">
+<img src="img/organico-bis500.webp" alt="Bisnaga Orgânico 500g" loading="lazy" style="height:250px;position:relative;z-index:1;filter:drop-shadow(0 16px 20px rgba(0,0,0,.35))">
+<img src="img/melato-pote1kg.webp" alt="Pote Melato 1kg" loading="lazy" style="height:210px;margin-left:-24px;filter:drop-shadow(0 16px 20px rgba(0,0,0,.35))">
+</div>
+</div>
+</section>
+
+<!-- CURIOSIDADES -->
+<section id="curiosidades" class="sec" style="padding:110px 24px;background:#FFF0C2">
+<div class="wrap" style="display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px">
+<div style="display:flex;align-items:flex-end;gap:18px"><img class="jar1" src="img/lenha-hd.png" alt="" aria-hidden="true" style="height:130px;width:auto;transform:rotate(-8deg);filter:drop-shadow(0 12px 16px rgba(90,40,0,.25))"><div style="display:flex;flex-direction:column;gap:12px"><span class="eyebrow">O Lenha te conta: você sabia?</span><h2 class="h2">Curiosidades que <em>adoçam</em> a conversa</h2></div></div>
+<span style="color:#6B4A2E;font-size:16px">Toque nos cartões para virar · <span id="flip-count">0</span> de 8 descobertas</span>
+</div>
+<div style="position:relative"><img class="bee" src="img/abelha-lenha.webp" alt="" aria-hidden="true" style="position:absolute;pointer-events:none;z-index:3;top:-62px;right:6px;width:66px;height:auto"><div class="grid4" id="curios"></div></div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="duvidas" class="sec" style="padding:0 24px 110px">
+<div style="max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:20px">
+<span class="eyebrow">Dúvidas</span>
+<h2 class="h2" style="margin:0 0 12px;font-size:clamp(32px,3.8vw,48px)">Perguntas frequentes</h2>
+<div id="faqs"></div>
+</div>
+</section>
+
+<!-- CTA -->
+<section style="position:relative;overflow:hidden;color:#FFF8EA">
+<img src="img/cena-bis500.jpg" alt="" aria-hidden="true" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+<div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(30,14,4,.92) 0%,rgba(30,14,4,.75) 50%,rgba(30,14,4,.35) 100%)"></div>
+<div style="position:relative;max-width:1180px;margin:0 auto;padding:120px 24px;display:flex;flex-direction:column;gap:24px;align-items:flex-start">
+<h2 class="serif" style="margin:0;font-size:clamp(40px,5.4vw,78px);line-height:1;letter-spacing:-.025em;font-weight:900;max-width:720px">A colher já está <span style="font-style:italic;font-weight:400;color:#FFC61A">esperando</span>.</h2>
+<p style="margin:0;font-size:19px;line-height:1.6;color:#F3E4C8;max-width:560px">Escolha o seu mel, finalize pelo WhatsApp e receba em casa, em qualquer lugar do Brasil.</p>
+<div style="display:flex;gap:14px;flex-wrap:wrap"><a class="btn btn-yellow" href="#loja">Escolher meu mel</a><button class="btn btn-ghost" data-action="open-cart">Ver carrinho (<span class="cart-count">0</span>)</button></div>
+</div>
+</section>
+</main>
+
+<footer style="background:#2B1A0E;color:#E9D7B5;padding:56px 24px 40px">
+<div class="wrap" style="display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between">
+<div style="display:flex;gap:16px;align-items:flex-start;max-width:420px"><img src="img/logo.png" alt="Forno &amp; Lenha Alimentos" style="width:96px;height:auto"><div style="display:flex;flex-direction:column;gap:8px"><span class="serif" style="font-size:26px;font-weight:900;color:#FFF8EA">Forno &amp; Lenha</span><span style="font-size:15px;line-height:1.6">Direto da Serra para você. Alimentos de verdade, feitos em família, com entrega para todo o Brasil.</span></div></div>
+<div style="display:flex;flex-direction:column;gap:10px;font-size:15px"><span style="color:#FFF8EA;font-weight:600">Contato</span><a href="https://instagram.com/fornoelenha.alimentos" target="_blank" rel="noopener" style="color:#FFC61A">@fornoelenha.alimentos</a><a href="mailto:fornoelenhaalimentos@gmail.com" style="color:#FFC61A">fornoelenhaalimentos@gmail.com</a><a class="wa-contato" href="#" target="_blank" rel="noopener" style="color:#FFC61A">WhatsApp</a></div>
+<div style="display:flex;flex-direction:column;gap:10px;font-size:15px"><span style="color:#FFF8EA;font-weight:600">Navegue</span><a href="#loja" style="color:#E9D7B5">Nossos méis</a><a href="#receitas" style="color:#E9D7B5">Receitas</a><a href="#revenda" style="color:#E9D7B5">Revenda</a></div>
+</div>
+<p class="wrap" style="margin-top:40px;font-size:13px;color:#B9A383">Mel não deve ser oferecido a crianças menores de 1 ano. © Forno &amp; Lenha Alimentos</p>
+</footer>
+
+<a class="wa-float wa-duvida" href="#" target="_blank" rel="noopener" aria-label="Tirar dúvidas pelo WhatsApp"><span class="wa-bub"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4C9.4 4 4 9.3 4 15.8c0 2.3.7 4.5 1.9 6.3L4.3 28l6.1-1.6c1.7.9 3.6 1.4 5.6 1.4 6.6 0 12-5.3 12-11.9S22.6 4 16 4z" fill="#fff"/><path d="M12.2 10.2c-.3-.6-.6-.6-.9-.6h-.8c-.3 0-.7.1-1 .5-.4.4-1.4 1.3-1.4 3.2s1.4 3.7 1.6 4c.2.3 2.7 4.3 6.7 5.9 3.3 1.3 4 1 4.7.9.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.8-.1-.2-.4-.3-.8-.5s-2.3-1.1-2.6-1.3c-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.3-.4.3-.8.1-.4-.2-1.7-.6-3.2-2-1.2-1-2-2.3-2.2-2.7-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.7.1-.3.1-.5 0-.7-.1-.2-.9-2.1-1.2-2.8z" fill="#25D366"/></svg></span></a>
+<div id="toast" class="toast hidden" role="status" style="position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:60;background:#2B1A0E;color:#FFF8EA;padding:10px 12px 10px 22px;border-radius:999px;box-shadow:0 16px 40px rgba(0,0,0,.3);display:flex;align-items:center;gap:12px;font-weight:500;max-width:calc(100% - 24px)">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFC61A" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span id="toast-msg"></span>
+<button data-action="open-cart" style="background:#FFC61A;border:0;color:#2B1A0E;font:600 14px 'Lexend',sans-serif;cursor:pointer;min-height:40px;padding:0 14px;border-radius:999px;white-space:nowrap">Ver carrinho</button>
+</div>
+
+<div id="cart" class="hidden" style="position:fixed;inset:0;z-index:70;display:flex;justify-content:flex-end">
+<button data-action="close-cart" aria-label="Fechar carrinho" style="position:absolute;inset:0;background:rgba(20,12,6,.55);border:0;cursor:pointer"></button>
+<aside aria-label="Carrinho" style="position:relative;width:min(440px,100%);height:100%;background:#FFF8EA;display:flex;flex-direction:column;box-shadow:-20px 0 60px rgba(0,0,0,.25)">
+<div style="display:flex;justify-content:space-between;align-items:center;padding:18px 20px 18px 24px;background:#FFC61A;border-bottom:3px solid #D3262E"><span style="display:flex;align-items:center;gap:12px"><img src="img/logo.png" alt="" aria-hidden="true" style="height:46px;width:auto"><span class="serif" style="font-size:24px;font-weight:900">Seu carrinho</span></span><button class="iconbtn" data-action="close-cart" aria-label="Fechar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+<div id="cart-items" style="flex:1;overflow-y:auto;padding:22px;display:flex;flex-direction:column;gap:14px"></div>
+<div id="cart-foot" style="padding:20px 24px;border-top:1px solid #EAD9B8;display:flex;flex-direction:column;gap:12px;background:#fff">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><span style="color:#6B4A2E">Subtotal (<span class="cart-count">0</span> <span id="itens-label">itens</span>)</span><span id="subtotal" class="serif" style="font-size:28px;font-weight:900"></span></div>
+<span style="font-size:13px;color:#6B4A2E">Frete combinado no WhatsApp · entregamos em todo o Brasil</span>
+<button class="btn btn-red" data-action="checkout" style="width:100%"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1.1-4A8 8 0 1 1 20 12z"/></svg>Finalizar pelo WhatsApp</button>
+<a id="amazon-btn" class="btn btn-line" href="#" target="_blank" rel="noopener" data-action="amazon" style="width:100%;background:#fff"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 15c5 3.5 13 3.5 18 0"/><path d="M17 13.5l4 1.5-1 4"/></svg>Comprar na Amazon</a>
+</div>
+<form id="checkout" class="hidden" novalidate style="position:absolute;inset:0;top:85px;background:#FFF8EA;display:flex;flex-direction:column;padding:24px;gap:18px;overflow-y:auto">
+<button type="button" data-action="checkout-back" style="align-self:flex-start;background:none;border:0;cursor:pointer;font-family:'Lexend',sans-serif;font-size:15px;color:#A81C22;font-weight:600;padding:4px 0">← Voltar ao carrinho</button>
+<div style="display:flex;align-items:center;gap:14px"><img src="img/lenha-hd.png" alt="" aria-hidden="true" style="height:84px;width:auto"><div style="display:flex;flex-direction:column;gap:4px"><span class="serif" style="font-size:24px;font-weight:900;line-height:1.1">Quase lá!</span><span style="font-size:15px;color:#6B4A2E;line-height:1.45">Conta seu nome e CEP pra gente já calcular o frete.</span></div></div>
+<label class="field">Seu nome<input id="ck-nome" name="nome" autocomplete="name" placeholder="Ex.: Maria Souza" required><small id="ck-nome-msg"></small></label>
+<label class="field">CEP de entrega<input id="ck-cep" name="cep" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" maxlength="9" required><small id="ck-cep-msg"></small></label>
+<div style="background:#fff;border-radius:16px;padding:14px 16px;display:flex;justify-content:space-between;align-items:baseline;box-shadow:0 1px 0 #EAD9B8"><span style="color:#6B4A2E">Total dos méis (<span class="cart-count">0</span>)</span><span id="ck-total" class="serif" style="font-size:24px;font-weight:900"></span></div>
+<button type="submit" class="btn btn-red" style="width:100%"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1.1-4A8 8 0 1 1 20 12z"/></svg>Enviar pedido pelo WhatsApp</button>
+<span style="font-size:13px;color:#6B4A2E;text-align:center">O WhatsApp abre com seu pedido pronto. É só tocar em enviar.</span>
+</form>
+</aside>
+</div>
+</div>
+
+<script>
+/* ===== CONFIGURAÇÃO: número do WhatsApp com DDI e DDD, só números. Ex.: 5511999999999 ===== */
+var WHATSAPP = '5511954231336';
+var AMAZON_URL = ''; /* PENDENTE: colar aqui o link da loja na Amazon */
+
+var B = 'img/';
+var SIZES = [['b250', 'Bisnaga 250g'], ['b500', 'Bisnaga 500g'], ['p500', 'Pote 500g'], ['p1kg', 'Pote 1kg']];
+var PRODUCTS = [
+  { id: 'silvestre', name: 'Mel Silvestre', short: 'Silvestre', tagline: 'O clássico da casa', badge: 'Mais pedido', accentText: '#A81C22',
+    bg: 'radial-gradient(circle at 50% 55%, #FF8A70 0%, #D3262E 70%)',
+    desc: 'Florada silvestre da mata catarinense. Dourado, perfumado e com aquele doce redondo de mel de verdade. É o rótulo vermelho.',
+    prices: { b250: 24.5, b500: 42, p500: 45, p1kg: 69 },
+    imgs: { b250: B + 'silvestre-bis250.webp', b500: B + 'silvestre-bis500.webp', p500: B + 'silvestre-pote500.webp', p1kg: B + 'silvestre-pote1kg.webp' },
+    tabs: { sabor: 'Doce equilibrado, com notas florais e um toque leve de caramelo no final.', combina: 'Pão quentinho, queijo branco, frutas, chá, iogurte e granola.', uso: 'O mel do dia a dia: direto da colher, no café da manhã ou para adoçar a bebida.' },
+    meters: [['Doçura', 4], ['Intensidade', 3], ['Notas florais', 4]] },
+  { id: 'organico', name: 'Mel Silvestre Orgânico', short: 'Orgânico', tagline: 'Orgânico certificado', badge: 'Orgânico Brasil', accentText: '#2E6B2C',
+    bg: 'radial-gradient(circle at 50% 55%, #9BD08A 0%, #3F8A3C 72%)',
+    desc: 'A florada silvestre em produção orgânica, com selo Orgânico Brasil e certificação participativa Ecovida no rótulo verde.',
+    prices: { b250: 29.5, b500: 47, p500: 49, p1kg: 78 },
+    imgs: { b250: B + 'organico-bis250.webp', b500: B + 'organico-bis500.webp', p500: B + 'organico-pote500.webp', p1kg: B + 'organico-pote1kg.webp' },
+    tabs: { sabor: 'Suave e floral, delicado do começo ao fim. Ótimo para quem está começando no mundo do mel.', combina: 'Frutas frescas, iogurte natural, chás de ervas, saladas e pratos leves.', uso: 'Perfeito para a rotina saudável: no iogurte, na fruta, no chá morninho.' },
+    meters: [['Doçura', 4], ['Intensidade', 2], ['Notas florais', 5]] },
+  { id: 'melato', name: 'Melato da Bracatinga', short: 'Melato', tagline: 'O ouro negro da serra', badge: 'Safra a cada 2 anos', accentText: '#8A5A00',
+    bg: 'radial-gradient(circle at 50% 55%, #FFD95E 0%, #C8961E 55%, #5A3A10 100%)',
+    desc: 'Escuro, encorpado e raro. Não nasce de flores, mas da bracatinga, árvore nativa do Planalto Sul. Rico em minerais e não cristaliza.',
+    prices: { b250: 39, b500: 56, p500: 59, p1kg: 89 },
+    imgs: { b250: B + 'melato-bis250.webp', b500: B + 'melato-bis500.webp', p500: B + 'melato-pote500.webp', p1kg: B + 'melato-pote1kg.webp' },
+    tabs: { sabor: 'Menos doce, com notas maltadas, amadeiradas e um final levemente tostado. Marcante.', combina: 'Queijos curados, castanhas, café, pão de fermentação natural e legumes assados.', uso: 'Surpreende em receitas salgadas e em tábuas de frios. Vai bem até no café.' },
+    meters: [['Doçura', 2], ['Intensidade', 5], ['Notas florais', 1]] }
+];
+var TAB_LABELS = [['sabor', 'Sabor'], ['combina', 'Combina com'], ['uso', 'Como usar']];
+var IMG_H = { b250: '230px', b500: '270px', p500: '250px', p1kg: '250px' };
+
+var QUIZ = [
+  { q: 'Como você mais gosta de usar mel?', opts: [
+    { t: 'Na colher, no pão, no café da manhã', s: { silvestre: 2, organico: 1, melato: 0 } },
+    { t: 'No iogurte, na fruta e no chá', s: { silvestre: 0, organico: 2, melato: 0 } },
+    { t: 'Com queijos, na tábua e em receitas salgadas', s: { silvestre: 0, organico: 0, melato: 2 } } ] },
+  { q: 'Que tipo de sabor te conquista?', opts: [
+    { t: 'Suave e floral', s: { silvestre: 0, organico: 2, melato: 0 } },
+    { t: 'Doce e equilibrado, aquele mel clássico', s: { silvestre: 2, organico: 0, melato: 0 } },
+    { t: 'Intenso, escuro e marcante', s: { silvestre: 0, organico: 0, melato: 2 } } ] },
+  { q: 'O que pesa mais na sua escolha?', opts: [
+    { t: 'Tradição: o sabor de mel de vó', s: { silvestre: 2, organico: 0, melato: 0 } },
+    { t: 'Produção orgânica certificada', s: { silvestre: 0, organico: 2, melato: 0 } },
+    { t: 'Raridade: quero algo que pouca gente conhece', s: { silvestre: 0, organico: 0, melato: 2 } } ] }
+];
+var WHY = {
+  silvestre: 'Você é do time clássico. O Silvestre tem aquele doce redondo e perfumado que combina com tudo, do pão de manhã ao chá da noite.',
+  organico: 'Você gosta de leveza e de saber a procedência do que come. O Orgânico é suave, floral e certificado.',
+  melato: 'Você gosta de sabores marcantes e de coisas raras. O Melato da Bracatinga é escuro, encorpado e só tem safra a cada dois anos.'
+};
+
+var STEPS = [
+  { short: 'Florada', title: 'Tudo começa na mata catarinense', text: 'Flores silvestres da mata atlântica e da serra de Santa Catarina oferecem néctar de dezenas de espécies. É essa mistura que dá ao mel silvestre um sabor complexo. No caso do Melato, a matéria-prima vem da bracatinga, árvore nativa do Planalto Sul.' },
+  { short: 'A abelha', title: 'Milhares de voos por pote', text: 'As abelhas campeiras saem da colmeia e visitam flor por flor, coletando néctar (ou o melato da bracatinga). Cada viagem rende uma gotinha, e é a soma de milhões delas que enche um pote.' },
+  { short: 'A colmeia', title: 'Onde o néctar vira mel', text: 'Dentro da colmeia, as abelhas adicionam enzimas e batem as asas para evaporar a água. Quando o mel está no ponto, elas fecham cada alvéolo com uma tampinha de cera. É o sinal de que está maduro.' },
+  { short: 'Colheita', title: 'Só o que está maduro', text: 'O apicultor retira apenas os quadros com mel maduro e operculado, sempre deixando alimento suficiente para a colmeia seguir forte.' },
+  { short: 'Envase', title: 'Simples como deve ser', text: 'Os favos são desoperculados e o mel é extraído por centrifugação, depois peneirado, decantado e envasado nas bisnagas e potes com o Lenha no rótulo.' },
+  { short: 'Sua mesa', title: 'Direto da serra para você', text: 'O mel viaja de Santa Catarina para São Paulo e, de lá, para qualquer lugar do Brasil. Você escolhe o mel e o tamanho, finaliza pelo WhatsApp e a gente entrega.' }
+];
+
+var CURIOS = [
+  { big: '∞', title: 'Mel não estraga', back: 'Bem fechado e longe da umidade, o mel dura praticamente para sempre. Já foram encontrados potes de mel em tumbas do Egito antigo.' },
+  { big: '2 mi', title: 'Flores para meio quilo', back: 'Estima-se que as abelhas visitem cerca de 2 milhões de flores para produzir algo perto de meio quilo de mel. Cada colherada é trabalho de equipe.' },
+  { big: '1/12', title: 'A obra de uma vida', back: 'Uma abelha operária produz, ao longo da vida inteira, cerca de 1/12 de colher de chá de mel. Pense nisso na próxima colherada.' },
+  { big: 'Cristalizou?', small: true, title: 'Está tudo bem', back: 'A cristalização é natural nos méis florais. Para voltar ao líquido, aqueça o pote em banho-maria morno, sem ferver. O Melato da Bracatinga, curiosamente, não cristaliza.' },
+  { big: 'Sem flor', title: 'O mel que vem da árvore', back: 'O Melato não nasce do néctar. Uma cochonilha que vive na casca da bracatinga suga a seiva e libera gotas açucaradas, que as abelhas coletam e transformam em mel.' },
+  { big: 'Ano par', title: 'Safra com calendário', back: 'O Melato da Bracatinga segue o ciclo de vida da cochonilha, que é de dois anos. A colheita acontece nos anos pares, entre fevereiro e julho.' },
+  { big: '200×', title: 'Asas a mil por hora', back: 'Uma abelha bate as asas cerca de 200 vezes por segundo. É isso que faz aquele zumbido, e é o mesmo movimento que ela usa dentro da colmeia para secar o néctar até virar mel.' },
+  { big: 'Dança', title: 'Abelha conversa dançando', back: 'Quando uma abelha acha um bom campo de flores, volta para a colmeia e faz a dança do requebrado. A direção e a duração dos passos mostram às outras onde fica a comida e a que distância.' }
+];
+
+var RECIPES = [
+  { id: 'torrada', cat: 'Café da manhã', title: 'Torrada de ricota, figo e mel', time: '10 min', serves: '2 porções', honey: 'silvestre', size: 'b250', img: 'img/receita-torrada.jpg',
+    ing: ['4 fatias de pão de fermentação natural', '200 g de ricota fresca', '4 figos frescos em fatias (ou morangos)', '2 colheres (sopa) de Mel Silvestre', 'Nozes picadas e raspas de limão a gosto'],
+    steps: ['Toste as fatias de pão até ficarem crocantes.', 'Tempere a ricota com uma pitada de sal e as raspas de limão e espalhe sobre o pão.', 'Cubra com os figos e as nozes e finalize com um fio generoso de mel.'] },
+  { id: 'iogurte', cat: 'Café da manhã', title: 'Bowl de iogurte, frutas e granola', time: '5 min', serves: '1 porção', honey: 'organico', size: 'b250', img: 'img/receita-iogurte.jpg',
+    ing: ['1 pote de iogurte natural', '1/2 banana em rodelas', 'Frutas vermelhas a gosto', '3 colheres (sopa) de granola', '1 colher (sopa) de Mel Silvestre Orgânico'],
+    steps: ['Coloque o iogurte numa tigela.', 'Distribua as frutas e a granola por cima.', 'Finalize com o mel em fio e sirva na hora.'] },
+  { id: 'brie', cat: 'Salgados', title: 'Brie assado com melato e nozes', time: '20 min', serves: '4 porções', honey: 'melato', size: 'b250', img: 'img/receita-brie.jpg',
+    ing: ['1 queijo brie (cerca de 250 g)', '3 colheres (sopa) de Melato da Bracatinga', '1/3 de xícara de nozes ou castanhas picadas', 'Ramos de alecrim ou tomilho', 'Torradas ou pão italiano para servir'],
+    steps: ['Preaqueça o forno a 180 °C. Faça cortes rasos em xadrez na casca do brie.', 'Coloque num refratário pequeno, cubra com as nozes e o alecrim e regue com o melato.', 'Asse por 12 a 15 minutos, até o centro ficar cremoso. Sirva quente com as torradas.'] },
+  { id: 'coalho', cat: 'Salgados', title: 'Queijo coalho na brasa com mel', time: '15 min', serves: '4 porções', honey: 'silvestre', size: 'b500', img: 'img/receita-coalho.jpg',
+    ing: ['8 espetos de queijo coalho', '3 colheres (sopa) de Mel Silvestre', 'Orégano ou pimenta calabresa a gosto', 'Folhas de hortelã para finalizar (opcional)'],
+    steps: ['Grelhe os espetos na brasa ou numa frigideira bem quente até dourar dos dois lados.', 'Tire do fogo e regue com o mel ainda quente.', 'Finalize com orégano ou calabresa e sirva na hora.'] },
+  { id: 'molho', cat: 'Salgados', title: 'Molho de mostarda e mel', time: '5 min', serves: '1 salada grande', honey: 'silvestre', size: 'b250', img: 'img/receita-molho.jpg',
+    ing: ['3 colheres (sopa) de mostarda dijon', '2 colheres (sopa) de Mel Silvestre', '2 colheres (sopa) de suco de limão', '4 colheres (sopa) de azeite', 'Sal e pimenta a gosto'],
+    steps: ['Num pote com tampa, coloque todos os ingredientes.', 'Feche e chacoalhe até virar um molho cremoso e homogêneo.', 'Use em saladas verdes, legumes grelhados ou como molho para sanduíches.'] },
+  { id: 'cha', cat: 'Bebidas', title: 'Chá de gengibre, limão e mel', time: '10 min', serves: '2 xícaras', honey: 'organico', size: 'b500', img: 'img/receita-cha.jpg',
+    ing: ['500 ml de água', '1 pedaço de gengibre (3 cm) em rodelas', 'Suco de 1 limão', '2 colheres (sopa) de Mel Silvestre Orgânico', 'Canela em pau (opcional)'],
+    steps: ['Ferva a água com o gengibre (e a canela) por 5 minutos.', 'Desligue o fogo e espere amornar um pouco.', 'Junte o limão e o mel, misture e sirva. Adicionar o mel com a bebida morna preserva melhor o sabor.'] },
+  { id: 'bolo', cat: 'Doces', title: 'Bolo de mel com especiarias', time: '50 min', serves: '10 fatias', honey: 'silvestre', size: 'p500', img: 'img/receita-bolo.jpg',
+    ing: ['2 ovos', '1 xícara de Mel Silvestre', '1/2 xícara de açúcar mascavo', '1/2 xícara de óleo', '1 xícara de leite', '2 xícaras de farinha de trigo', '1 colher (sopa) de cacau em pó', '1 colher (chá) de canela e 1/2 de cravo em pó', '1 colher (sopa) de fermento em pó'],
+    steps: ['Preaqueça o forno a 180 °C e unte uma forma.', 'Bata os ovos, o mel, o açúcar, o óleo e o leite. Junte a farinha, o cacau e as especiarias peneirados.', 'Misture o fermento por último, despeje na forma e asse por 35 a 40 minutos.', 'Para uma calda brilhante, aqueça 3 colheres de mel com 1 de manteiga e pincele sobre o bolo ainda morno.'] },
+  { id: 'banana', cat: 'Doces', title: 'Banana caramelizada no melato', time: '10 min', serves: '2 porções', honey: 'melato', size: 'b500', img: 'img/receita-banana.jpg',
+    ing: ['2 bananas maduras cortadas ao meio no comprimento', '1 colher (sopa) de manteiga', '2 colheres (sopa) de Melato da Bracatinga', 'Canela a gosto', 'Sorvete de creme ou iogurte para servir'],
+    steps: ['Derreta a manteiga numa frigideira e doure as bananas dos dois lados.', 'Junte o melato e deixe borbulhar por 1 minuto, regando as bananas.', 'Polvilhe canela e sirva com sorvete ou iogurte.'] }
+];
+var FILTERS = ['Todas', 'Café da manhã', 'Salgados', 'Doces', 'Bebidas'];
+
+var CMP = [
+  { k: 'Rótulo', a: 'Vermelho', b: 'Verde', c: 'Dourado, tampa preta' },
+  { k: 'Origem', a: 'Néctar de flores silvestres de Santa Catarina', b: 'Néctar de flores silvestres, produção orgânica certificada', c: 'Melato da bracatinga, árvore nativa do Planalto Sul' },
+  { k: 'Cor', a: 'Âmbar dourado', b: 'Dourado a âmbar', c: 'Escuro, quase preto' },
+  { k: 'Sabor', a: 'Doce, floral, leve caramelo', b: 'Suave, delicado e floral', c: 'Encorpado, maltado, menos doce' },
+  { k: 'Cristaliza?', a: 'Sim, naturalmente com o tempo', b: 'Sim, naturalmente com o tempo', c: 'Não cristaliza' },
+  { k: 'A partir de', a: 'R$ 24,50 (bisnaga 250g)', b: 'R$ 29,50 (bisnaga 250g)', c: 'R$ 39,00 (bisnaga 250g)' }
+];
+
+var FAQS = [
+  { q: 'Qual a diferença entre bisnaga e pote?', a: 'O mel é o mesmo. A bisnaga é prática para o dia a dia, porque você aperta e serve sem sujar a colher. O pote é ideal para a família e para quem usa mel na cozinha. O de 1kg sai mais em conta por grama.' },
+  { q: 'Como devo guardar o mel?', a: 'Em temperatura ambiente, com a embalagem bem fechada, longe da umidade e do sol direto. Não precisa (nem é bom) guardar na geladeira, porque o frio acelera a cristalização.' },
+  { q: 'Meu mel cristalizou. Estragou?', a: 'Não! A cristalização é natural nos méis florais e não altera a qualidade. Se preferir líquido, coloque o pote em banho-maria morno, sem deixar ferver, e mexa até dissolver.' },
+  { q: 'Vocês entregam na minha cidade?', a: 'Entregamos em todo o Brasil. O frete é calculado e combinado com você no WhatsApp, na hora de finalizar o pedido.' },
+  { q: 'Como faço meu pedido?', a: 'Escolha o mel e o tamanho aqui no site, abra o carrinho e toque em Finalizar pelo WhatsApp. Sua lista já vai pronta na mensagem; é só enviar e combinar pagamento e entrega com a gente.' },
+  { q: 'Posso dar mel para crianças?', a: 'Para maiores de 1 ano, sim. Mel não deve ser oferecido a bebês com menos de 1 ano de idade.' },
+  { q: 'Vocês vendem para lojas e empórios?', a: 'Sim! Atendemos revendedores com tabela especial. Toque em Quero a tabela de revenda e fale com a gente pelo WhatsApp.' }
+];
+
+
+
+var STEP_ART = [
+'<img src="img/jornada-florada.jpg" alt="Mata de araucárias florida na serra de Santa Catarina" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">',
+'<img src="img/jornada-abelha.jpg" alt="Abelha coletando néctar numa flor" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">',
+'<img src="img/jornada-colmeia.jpg" alt="Abelhas trabalhando sobre os favos da colmeia" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">',
+'<img src="img/jornada-colheita.jpg" alt="Apicultor segurando um quadro de favos de mel maduro" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">',
+ '<img src="img/silvestre-pote500.webp" alt="Pote de Mel Silvestre envasado" style="height:82%;filter:drop-shadow(0 20px 24px rgba(40,15,0,.35))">',
+ '<img src="img/cena-pote1kg.jpg" alt="Os três méis Forno &amp; Lenha prontos para a mesa" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">'
+];
+
+function money(v){return 'R$ '+v.toFixed(2).replace('.',',');}
+function prod(id){return PRODUCTS.filter(function(x){return x.id===id;})[0];}
+function sizeName(sid){return SIZES.filter(function(s){return s[0]===sid;})[0][1];}
+function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function wa(msg){var n=String(WHATSAPP||'').replace(/\D/g,'');return 'https://wa.me/'+(n||'')+'?text='+encodeURIComponent(msg);}
+function load(){try{return JSON.parse(localStorage.getItem('fl_cart')||'{}');}catch(e){return {};}}
+function save(){try{localStorage.setItem('fl_cart',JSON.stringify(S.cart));}catch(e){}}
+
+var S={cart:load(),sel:{silvestre:'p500',organico:'p500',melato:'p500'},tabs:{silvestre:'sabor',organico:'sabor',melato:'sabor'},quizStep:0,quizScores:{silvestre:0,organico:0,melato:0},step:0,filter:'Todas',openRecipe:'',flipped:{},faqOpen:0};
+var IMGH={b250:'230px',b500:'270px',p500:'250px',p1kg:'250px'};
+
+function renderProducts(){
+ document.getElementById('products').innerHTML=PRODUCTS.map(function(p){
+  var sid=S.sel[p.id],key=p.id+'|'+sid,qty=S.cart[key]||0,tab=S.tabs[p.id];
+  var sizes=SIZES.map(function(s){return '<button class="pill'+(s[0]===sid?' on':'')+'" aria-pressed="'+(s[0]===sid)+'" data-action="size" data-p="'+p.id+'" data-s="'+s[0]+'">'+s[1]+'<small>'+money(p.prices[s[0]])+'</small></button>';}).join('');
+  var tabs=TAB_LABELS.map(function(t){return '<button class="tab'+(tab===t[0]?' on':'')+'" data-action="tab" data-p="'+p.id+'" data-t="'+t[0]+'">'+t[1]+'</button>';}).join('');
+  var meters=p.meters.map(function(m){var d='';for(var i=0;i<5;i++)d+='<span class="dot'+(i<m[1]?' on':'')+'"></span>';return '<div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><span style="font-size:14px;color:#6B4A2E">'+m[0]+'</span><span style="display:flex;gap:6px">'+d+'</span></div>';}).join('');
+  var buy=qty>0?'<div style="display:flex;align-items:center;gap:10px"><button class="qtybtn" data-action="qty" data-k="'+key+'" data-d="-1" aria-label="Diminuir quantidade">−</button><span style="min-width:24px;text-align:center;font-weight:700;font-size:18px">'+qty+'</span><button class="qtybtn" data-action="qty" data-k="'+key+'" data-d="1" aria-label="Aumentar quantidade">+</button></div>':'<button class="btn btn-red" data-action="add" data-p="'+p.id+'" data-s="'+sid+'">Adicionar <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>';
+  return '<article class="card-lift" style="background:#fff;border-radius:28px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 0 #EAD9B8,0 12px 34px rgba(60,36,12,.08)">'+
+  '<div style="position:relative;height:340px;display:flex;align-items:center;justify-content:center;background:'+p.bg+';overflow:hidden"><svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.14" aria-hidden="true"><rect width="100%" height="100%" fill="url(#hex)"/></svg>'+
+  '<span style="position:absolute;top:16px;left:16px;padding:7px 13px;border-radius:999px;background:#fff;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;z-index:2">'+p.badge+'</span>'+
+  '<img class="swap" src="'+p.imgs[sid]+'" alt="'+esc(p.name+' '+sizeName(sid))+'" style="position:relative;height:'+IMGH[sid]+';max-width:80%;object-fit:contain;filter:drop-shadow(0 20px 24px rgba(40,15,0,.35))"></div>'+
+  '<div style="padding:26px;display:flex;flex-direction:column;gap:16px;flex:1"><div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:13px;color:'+p.accentText+';font-weight:700;letter-spacing:.08em;text-transform:uppercase">'+p.tagline+'</span><h3 class="serif" style="margin:0;font-size:30px;line-height:1.1;font-weight:800">'+p.name+'</h3></div>'+
+  '<p style="margin:0;color:#4A3220;font-size:15px;line-height:1.6">'+p.desc+'</p><div class="sizes">'+sizes+'</div><div style="display:flex;gap:8px;flex-wrap:wrap">'+tabs+'</div>'+
+  '<p style="margin:0;min-height:52px;font-size:15px;line-height:1.55;background:#FFF4D6;padding:14px 16px;border-radius:14px">'+p.tabs[tab]+'</p><div style="display:flex;flex-direction:column;gap:9px">'+meters+'</div>'+
+  '<div style="margin-top:auto;padding-top:18px;border-top:2px dashed #EAD9B8;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap"><div style="display:flex;flex-direction:column"><span style="font-size:13px;color:#6B4A2E">'+sizeName(sid)+'</span><span class="serif" style="font-size:30px;font-weight:900;color:#A81C22;line-height:1.1">'+money(p.prices[sid])+'</span></div>'+buy+'</div></div></article>';
+ }).join('');
+}
+
+function renderCart(){
+ var count=0,sub=0,items=[];
+ Object.keys(S.cart).forEach(function(k){var q=S.cart[k],pr=k.split('|'),p=prod(pr[0]);if(!p)return;var price=p.prices[pr[1]];count+=q;sub+=q*price;items.push({k:k,p:p,s:pr[1],q:q,price:price});});
+ Array.prototype.forEach.call(document.querySelectorAll('.cart-count'),function(e){e.textContent=count;});
+ document.getElementById('itens-label').textContent=count===1?'item':'itens';
+ document.getElementById('subtotal').textContent=money(sub);
+ document.getElementById('cart-foot').classList.toggle('hidden',count===0);
+ var box=document.getElementById('cart-items');
+ if(!count){box.innerHTML='<div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:30px 10px;color:#6B4A2E"><img class="jar2" src="img/lenha-hd.png" alt="Lenha" style="height:170px;width:auto"><span class="serif" style="font-size:22px;color:#2B1A0E">O Lenha tá esperando seu pedido.</span><span style="font-size:15px">Seu carrinho ainda está sem mel.</span><button class="btn btn-red" data-action="go-shop">Ver os méis</button></div>';}
+ else{box.innerHTML=items.map(function(c){return '<div style="display:flex;gap:14px;align-items:center;background:#fff;border-radius:18px;padding:12px;box-shadow:0 1px 0 #EAD9B8"><div style="width:64px;height:80px;border-radius:14px;background:'+c.p.bg+';display:flex;align-items:center;justify-content:center;flex-shrink:0"><img src="'+c.p.imgs[c.s]+'" alt="" style="height:70px"></div><div style="flex:1;display:flex;flex-direction:column;gap:3px;min-width:0"><span style="font-weight:600">'+c.p.name+'</span><span style="font-size:13px;color:#6B4A2E">'+sizeName(c.s)+' · '+money(c.price)+'</span><span style="font-size:14px;font-weight:700;color:#A81C22">'+money(c.q*c.price)+'</span></div><div style="display:flex;align-items:center;gap:6px"><button class="qtybtn" data-action="qty" data-k="'+c.k+'" data-d="-1" aria-label="Diminuir">−</button><span style="min-width:18px;text-align:center;font-weight:700">'+c.q+'</span><button class="qtybtn" data-action="qty" data-k="'+c.k+'" data-d="1" aria-label="Aumentar">+</button></div></div>';}).join('');}
+ var lines=items.map(function(c){return '• '+c.q+'x '+c.p.name+' na '+sizeName(c.s).toLowerCase()+' de '+money(c.price)+(c.q>1?' (= '+money(c.q*c.price)+')':'');}).join('\n');
+ S.order={lines:lines,total:sub};document.getElementById('ck-total').textContent=money(sub);if(!count)showCheckout(false);
+ save();
+}
+
+function renderQuiz(){
+ var qs=S.quizStep,box=document.getElementById('quiz-box');
+ var segs='<div style="display:flex;gap:8px">'+QUIZ.map(function(_,i){return '<span class="seg seg-l'+(i<qs?' on':'')+'"></span>';}).join('')+'</div>';
+ if(qs<QUIZ.length){var q=QUIZ[qs];box.innerHTML=segs+'<div style="display:flex;flex-direction:column;gap:20px"><span style="font-size:14px;color:#A81C22;font-weight:700">Pergunta '+(qs+1)+' de 3</span><h3 class="serif" style="margin:0;font-size:30px;line-height:1.15;font-weight:800">'+q.q+'</h3><div style="display:flex;flex-direction:column;gap:12px">'+q.opts.map(function(o,i){return '<button class="qopt" data-action="quiz" data-i="'+i+'"><span style="width:36px;height:36px;border-radius:50%;background:#FFC61A;display:inline-flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0">'+'ABC'[i]+'</span><span>'+o.t+'</span></button>';}).join('')+'</div></div>';return;}
+ var best='silvestre';['organico','melato'].forEach(function(k){if(S.quizScores[k]>S.quizScores[best])best=k;});var p=prod(best);
+ box.innerHTML=segs+'<div style="display:flex;gap:32px;align-items:center;flex-wrap:wrap"><div style="width:200px;height:250px;border-radius:24px;display:flex;align-items:center;justify-content:center;background:'+p.bg+';flex-shrink:0"><img class="swap" src="'+p.imgs.p500+'" alt="'+p.name+'" style="height:210px;filter:drop-shadow(0 16px 20px rgba(40,15,0,.35))"></div><div style="display:flex;flex-direction:column;gap:14px;flex:1;min-width:240px"><span style="font-size:14px;color:#A81C22;font-weight:700;letter-spacing:.08em;text-transform:uppercase">O seu mel é</span><h3 class="serif" style="margin:0;font-size:40px;line-height:1.05;font-weight:900">'+p.name+'</h3><p style="margin:0;color:#4A3220;font-size:17px;line-height:1.55">'+WHY[best]+'</p><div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:6px"><button class="btn btn-red" data-action="add" data-p="'+best+'" data-s="p500">Colocar no carrinho · '+money(p.prices.p500)+'</button><button class="btn btn-line" data-action="quiz-restart">Refazer o teste</button></div></div></div>';
+}
+
+function renderSteps(){
+ var s=S.step,cur=STEPS[s];
+ document.getElementById('steps').innerHTML=STEPS.map(function(x,i){return '<button class="stepbtn'+(i===s?' on':'')+'" data-action="step" data-i="'+i+'"><span class="ring"><span class="serif" style="font-size:24px;font-weight:900">'+(i+1)+'</span></span><span>'+x.short+'</span></button>';}).join('');
+ document.getElementById('step-segs').innerHTML=STEPS.map(function(_,i){return '<span class="seg'+(i<=s?' on':'')+'"></span>';}).join('');
+ document.getElementById('step-n').textContent='Etapa '+(s+1)+' de 6';
+ document.getElementById('step-title').textContent=cur.title;
+ document.getElementById('step-text').textContent=cur.text;
+ document.getElementById('next-label').textContent=s===STEPS.length-1?'Recomeçar':'Próxima etapa';
+ document.getElementById('step-art').innerHTML='<svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.18" aria-hidden="true"><rect width="100%" height="100%" fill="url(#hex)"/></svg>'+STEP_ART[s];
+}
+
+function renderCmp(){
+ var h='<div style="padding:20px 22px"></div><div style="padding:20px 22px;border-bottom:4px solid #D3262E"><span class="serif" style="font-size:20px;font-weight:800">Silvestre</span></div><div style="padding:20px 22px;border-bottom:4px solid #3F8A3C"><span class="serif" style="font-size:20px;font-weight:800">Silvestre Orgânico</span></div><div style="padding:20px 22px;border-bottom:4px solid #C8961E"><span class="serif" style="font-size:20px;font-weight:800">Melato da Bracatinga</span></div>';
+ CMP.forEach(function(r){var c='padding:18px 22px;border-top:1px solid #F1E3C6;font-size:15px;line-height:1.5';h+='<div style="'+c+';font-weight:700;font-size:13px;color:#A81C22;text-transform:uppercase;letter-spacing:.06em">'+r.k+'</div><div style="'+c+'">'+r.a+'</div><div style="'+c+'">'+r.b+'</div><div style="'+c+'">'+r.c+'</div>';});
+ document.getElementById('cmp').innerHTML=h;
+}
+
+function renderCurios(){
+ var n=0;
+ document.getElementById('curios').innerHTML=CURIOS.map(function(c,i){var f=!!S.flipped[i];if(f)n++;return '<button class="flipcard '+(f?'flip-back':'flip-front')+'" data-action="flip" data-i="'+i+'" aria-pressed="'+f+'">'+(f?'<span style="font-size:16px;line-height:1.6">'+c.back+'</span><span style="font-size:14px;color:#FFC61A;font-weight:700">← Voltar</span>':'<span style="display:flex;flex-direction:column;gap:18px"><span class="serif" style="font-size:'+(c.small?'34px':'52px')+';font-weight:900;color:#D3262E;line-height:1">'+c.big+'</span><span class="serif" style="font-size:22px;font-weight:700;line-height:1.2">'+c.title+'</span></span><span style="font-size:14px;color:#A81C22;font-weight:700">Virar o cartão →</span>')+'</button>';}).join('');
+ document.getElementById('flip-count').textContent=n;
+}
+
+function renderRecipes(){
+ document.getElementById('filters').innerHTML=FILTERS.map(function(f){return '<button class="tab'+(S.filter===f?' on':'')+'" data-action="filter" data-f="'+f+'">'+f+'</button>';}).join('');
+ document.getElementById('recipes').innerHTML=RECIPES.filter(function(r){return S.filter==='Todas'||r.cat===S.filter;}).map(function(r){
+  var p=prod(r.honey),open=S.openRecipe===r.id;
+  var body=open?'<div style="display:flex;flex-direction:column;gap:14px;padding-top:6px"><span style="font-weight:700;font-size:14px;color:#A81C22;text-transform:uppercase;letter-spacing:.06em">Ingredientes</span><ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;font-size:15px;line-height:1.5">'+r.ing.map(function(i){return '<li>'+i+'</li>';}).join('')+'</ul><span style="font-weight:700;font-size:14px;color:#A81C22;text-transform:uppercase;letter-spacing:.06em">Modo de preparo</span><ol style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px;font-size:15px;line-height:1.55">'+r.steps.map(function(s){return '<li>'+s+'</li>';}).join('')+'</ol><button class="btn btn-red" data-action="add" data-p="'+r.honey+'" data-s="'+r.size+'" style="align-self:flex-start">Comprar '+p.name+' · '+money(p.prices[r.size])+'</button></div>':'';
+  return '<article class="card-lift" style="background:#fff;border-radius:26px;overflow:hidden;box-shadow:0 1px 0 #EAD9B8,0 10px 30px rgba(60,36,12,.07);display:flex;flex-direction:column"><div style="height:190px;position:relative;display:flex;align-items:flex-end;padding:18px;overflow:hidden;background:#D3262E"><img src="'+r.img+'" alt="'+esc(r.title)+'" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><span aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(211,38,46,.82) 0%,rgba(211,38,46,.35) 38%,rgba(211,38,46,0) 62%)"></span><img src="'+p.imgs[r.size]+'" alt="" aria-hidden="true" loading="lazy" style="position:absolute;right:14px;bottom:-24px;height:180px;transform:rotate(8deg);filter:drop-shadow(0 12px 16px rgba(40,15,0,.45))"><span style="position:relative;padding:6px 12px;border-radius:999px;background:#fff;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase">'+r.cat+'</span></div><div style="padding:24px;display:flex;flex-direction:column;gap:14px"><h3 class="serif" style="margin:0;font-size:24px;line-height:1.15;font-weight:800">'+r.title+'</h3><div style="display:flex;gap:16px;flex-wrap:wrap;font-size:14px;color:#6B4A2E"><span>⏱ '+r.time+'</span><span>'+r.serves+'</span></div><span style="font-size:14px;background:#FFF4D6;border-radius:12px;padding:10px 14px">Mel ideal: <strong>'+p.name+'</strong></span>'+body+'<button class="btn btn-line" data-action="recipe" data-id="'+r.id+'" style="align-self:flex-start;min-height:44px">'+(open?'Fechar receita':'Ver receita completa')+'</button></div></article>';
+ }).join('');
+}
+
+
+/* AVALIAÇÕES — para publicar uma nova, adicione um item no topo da lista (só avaliações reais de clientes):
+   { nome: 'Nome S.', cidade: 'Cidade/UF', mel: 'silvestre' | 'organico' | 'melato', nota: 1 a 5, texto: '...', data: 'AAAA-MM-DD' } */
+var REVIEWS = [];
+/* PRÉVIA: comentários fictícios só para ver o layout. Na versão final, REVIEWS_DEMO = false. */
+var REVIEWS_DEMO = false;
+if(REVIEWS_DEMO && !REVIEWS.length) REVIEWS = [
+ { nome: 'Cliente Exemplo 1', cidade: 'São Paulo/SP', mel: 'melato', nota: 5, texto: 'Texto de exemplo: aqui aparece o comentário do cliente contando o que achou do mel, da embalagem e da entrega.', data: '2026-11-20' },
+ { nome: 'Cliente Exemplo 2', cidade: 'Campinas/SP', mel: 'silvestre', nota: 5, texto: 'Texto de exemplo: um comentário mais curto também fica bonito no cartão.', data: '2026-11-18' },
+ { nome: 'Cliente Exemplo 3', cidade: 'Florianópolis/SC', mel: 'organico', nota: 4, texto: 'Texto de exemplo: as estrelas mostram a nota que o cliente deu, de 1 a 5, e a etiqueta mostra qual mel ele comprou.', data: '2026-11-15' }
+];
+
+function renderReviews(){
+ var box=document.getElementById('reviews'),sum=document.getElementById('rev-summary');
+ document.getElementById('rev-wa').href=wa('Oi! Quero deixar minha avaliação do mel Forno & Lenha: ');
+ if(!REVIEWS.length){
+  box.style.display='block';
+  box.innerHTML='<div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;background:#FFF0C2;border-radius:26px;padding:28px;border:2px dashed #E8B84A"><img class="jar2" src="img/abelha-lenha.webp" alt="" aria-hidden="true" style="width:110px;height:auto"><div style="display:flex;flex-direction:column;gap:8px;flex:1;min-width:220px"><span class="serif" style="font-size:24px;font-weight:800;color:#2B1A0E">As primeiras avaliações estão chegando.</span><span style="font-size:16px;color:#6B4A2E;line-height:1.55">Estamos reunindo os comentários de quem já levou nosso mel pra casa. Seja um dos primeiros a contar o que achou.</span></div></div>';
+  sum.textContent='';return;
+ }
+ box.style.display='';
+ var media=REVIEWS.reduce(function(a,r){return a+r.nota;},0)/REVIEWS.length;
+ sum.innerHTML=(REVIEWS_DEMO?'<span style="background:#D3262E;color:#fff;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:700;margin-right:8px">PRÉVIA · comentários de exemplo</span>':'')+'Nota média '+media.toFixed(1).replace('.',',')+' de 5 · '+REVIEWS.length+(REVIEWS.length>1?' avaliações':' avaliação');
+ box.innerHTML=REVIEWS.slice(0,6).map(function(r){
+  var p=prod(r.mel),st='';for(var i=0;i<5;i++)st+='<span style="color:'+(i<r.nota?'#F2A900':'#E9D7B5')+'">★</span>';
+  return '<article style="background:#fff;border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:14px;box-shadow:0 1px 0 #EAD9B8,0 10px 30px rgba(60,36,12,.07)"><span style="font-size:22px;letter-spacing:2px" aria-label="Nota '+r.nota+' de 5">'+st+'</span><p style="margin:0;font-size:16px;line-height:1.6">“'+esc(r.texto)+'”</p><div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;flex-wrap:wrap"><span style="font-weight:700">'+esc(r.nome)+'<span style="font-weight:400;color:#6B4A2E"> · '+esc(r.cidade)+'</span></span>'+(p?'<span style="font-size:13px;background:#FFF4D6;border-radius:999px;padding:5px 11px">'+p.name+'</span>':'')+'</div></article>';
+ }).join('');
+}
+
+var CK={city:''};
+function showCheckout(o){var f=document.getElementById('checkout');if(!f)return;f.classList.toggle('hidden',!o);if(o){try{var d=JSON.parse(localStorage.getItem('fl_cliente')||'{}');var n=document.getElementById('ck-nome'),c=document.getElementById('ck-cep');if(d.nome&&!n.value)n.value=d.nome;if(d.cep&&!c.value){c.value=d.cep;lookupCep();}}catch(e){}setTimeout(function(){document.getElementById('ck-nome').focus();},50);}}
+function fmtCep(v){v=v.replace(/\D/g,'').slice(0,8);return v.length>5?v.slice(0,5)+'-'+v.slice(5):v;}
+function lookupCep(){var c=document.getElementById('ck-cep'),m=document.getElementById('ck-cep-msg'),d=c.value.replace(/\D/g,'');CK.city='';m.textContent='';m.style.color='';
+ if(d.length!==8)return;m.textContent='Buscando cidade…';
+ try{fetch('https://viacep.com.br/ws/'+d+'/json/').then(function(r){return r.json();}).then(function(j){if(c.value.replace(/\D/g,'')!==d)return;if(j.erro){m.textContent='Não achamos esse CEP. Confira os números.';m.style.color='#A81C22';return;}CK.city=j.localidade+'/'+j.uf;m.textContent='📍 '+(j.bairro?j.bairro+', ':'')+CK.city;}).catch(function(){m.textContent='';});}catch(e){m.textContent='';}
+}
+function submitCheckout(ev){ev.preventDefault();
+ var n=document.getElementById('ck-nome'),c=document.getElementById('ck-cep'),nm=n.value.trim(),cep=c.value.replace(/\D/g,''),ok=true;
+ document.getElementById('ck-nome-msg').textContent='';
+ if(nm.length<2){document.getElementById('ck-nome-msg').textContent='Digite seu nome.';document.getElementById('ck-nome-msg').style.color='#A81C22';ok=false;}
+ if(cep.length!==8){var m=document.getElementById('ck-cep-msg');m.textContent='O CEP tem 8 números.';m.style.color='#A81C22';ok=false;}
+ if(!ok)return;
+ try{localStorage.setItem('fl_cliente',JSON.stringify({nome:nm,cep:fmtCep(cep)}));}catch(e){}
+ var msg='Olá! Me chamo '+nm+'. Gostaria de comprar:\n'+S.order.lines+'\n\nTotal: '+money(S.order.total)+'\n\nCEP de entrega: '+fmtCep(cep)+(CK.city?' ('+CK.city+')':'')+'\nPode calcular o frete pra mim?';
+ window.open(wa(msg),'_blank');
+}
+
+function renderFaqs(){
+ document.getElementById('faqs').innerHTML=FAQS.map(function(f,i){var o=S.faqOpen===i;return '<div><button class="faqbtn" data-action="faq" data-i="'+i+'" aria-expanded="'+o+'"><span>'+f.q+'</span><span style="width:36px;height:36px;border-radius:50%;background:#FFC61A;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;font-family:Lexend,sans-serif;font-size:22px">'+(o?'−':'+')+'</span></button>'+(o?'<p style="margin:0;padding:16px 0 24px;font-size:17px;line-height:1.65;color:#4A3220">'+f.a+'</p>':'')+'</div>';}).join('');
+}
+
+var toastTimer;
+function toast(msg){var t=document.getElementById('toast');document.getElementById('toast-msg').textContent=msg;t.classList.remove('hidden');t.style.animation='none';t.offsetHeight;t.style.animation='';clearTimeout(toastTimer);toastTimer=setTimeout(function(){t.classList.add('hidden');},2800);}
+function add(pid,sid){var k=pid+'|'+sid;S.cart[k]=(S.cart[k]||0)+1;renderCart();renderProducts();toast(prod(pid).name+' '+sizeName(sid).toLowerCase()+' no carrinho');}
+function openCart(o){document.getElementById('cart').classList.toggle('hidden',!o);document.getElementById('toast').classList.add('hidden');document.body.style.overflow=o?'hidden':'';}
+
+document.addEventListener('click',function(e){
+ var el=e.target.closest('[data-action]');if(!el)return;var a=el.dataset.action,d=el.dataset;
+ if(a==='size'){S.sel[d.p]=d.s;renderProducts();}
+ else if(a==='tab'){S.tabs[d.p]=d.t;renderProducts();}
+ else if(a==='add'){add(d.p,d.s);}
+ else if(a==='qty'){var q=(S.cart[d.k]||0)+Number(d.d);if(q<=0)delete S.cart[d.k];else S.cart[d.k]=q;renderCart();renderProducts();}
+ else if(a==='amazon'){if(!AMAZON_URL){e.preventDefault();toast('Loja na Amazon em breve');}}
+ else if(a==='add-trio'){PRODUCTS.forEach(function(p){var k=p.id+'|b250';S.cart[k]=(S.cart[k]||0)+1;});renderCart();renderProducts();toast('Trio de degustação no carrinho');}
+ else if(a==='open-cart'){openCart(true);}
+ else if(a==='close-cart'){openCart(false);showCheckout(false);}
+ else if(a==='checkout'){showCheckout(true);}
+ else if(a==='checkout-back'){showCheckout(false);}
+ else if(a==='go-shop'){openCart(false);document.getElementById('loja').scrollIntoView({behavior:'smooth'});}
+ else if(a==='quiz'){var o=QUIZ[S.quizStep].opts[Number(d.i)];Object.keys(o.s).forEach(function(k){S.quizScores[k]+=o.s[k];});S.quizStep++;renderQuiz();}
+ else if(a==='quiz-restart'){S.quizStep=0;S.quizScores={silvestre:0,organico:0,melato:0};renderQuiz();}
+ else if(a==='step'){S.step=Number(d.i);renderSteps();}
+ else if(a==='next-step'){S.step=(S.step+1)%STEPS.length;renderSteps();}
+ else if(a==='prev-step'){S.step=(S.step-1+STEPS.length)%STEPS.length;renderSteps();}
+ else if(a==='flip'){S.flipped[d.i]=!S.flipped[d.i];renderCurios();}
+ else if(a==='filter'){S.filter=d.f;renderRecipes();}
+ else if(a==='recipe'){S.openRecipe=S.openRecipe===d.id?'':d.id;renderRecipes();}
+ else if(a==='faq'){var i=Number(d.i);S.faqOpen=S.faqOpen===i?-1:i;renderFaqs();}
+});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')openCart(false);});
+
+document.getElementById('trio-price').textContent=money(PRODUCTS.reduce(function(a,p){return a+p.prices.b250;},0));
+document.getElementById('checkout').addEventListener('submit',submitCheckout);
+document.getElementById('ck-nome').addEventListener('input',function(){document.getElementById('ck-nome-msg').textContent='';});
+var ckc=document.getElementById('ck-cep');ckc.addEventListener('input',function(){ckc.value=fmtCep(ckc.value);lookupCep();});
+Array.prototype.forEach.call(document.querySelectorAll('.wa-duvida'),function(a){a.href=wa('Olá! Vim pelo site da Forno & Lenha e tenho uma dúvida sobre os méis.');});
+var amz=document.getElementById('amazon-btn');if(AMAZON_URL)amz.href=AMAZON_URL;
+Array.prototype.forEach.call(document.querySelectorAll('.wa-revenda'),function(a){a.href=wa('Olá, sou revendedor e gostaria de ver a tabela de revenda.');});
+Array.prototype.forEach.call(document.querySelectorAll('.wa-contato'),function(a){a.href=wa('Olá, Forno & Lenha! Vim pelo site.');});
+renderProducts();renderCart();renderQuiz();renderSteps();renderCmp();renderCurios();renderRecipes();renderReviews();renderFaqs();
+</script>
+</body>
+</html>
