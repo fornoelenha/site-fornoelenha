@@ -37,6 +37,12 @@ html{scroll-behavior:smooth}
 @keyframes wapulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55),0 12px 28px rgba(0,0,0,.28)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0),0 12px 28px rgba(0,0,0,.28)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0),0 12px 28px rgba(0,0,0,.28)}}
 @media (max-width:600px){.wa-float{right:14px;bottom:14px}.wa-float .wa-bub{width:56px;height:56px}.wa-float .wa-tip{display:none}}
 @media (prefers-reduced-motion:reduce){.wa-float .wa-bub{animation:none}}
+.rv-chip{cursor:pointer}.rv-chip input{position:absolute;opacity:0}.rv-chip span{display:inline-flex;align-items:center;min-height:42px;padding:0 16px;border-radius:999px;border:2px solid #EAD9B8;font-size:14px;font-weight:600;background:#fff}
+.rv-chip input:checked+span{background:#2B1A0E;color:#FFF8EA;border-color:#2B1A0E}.rv-chip input:focus-visible+span{outline:3px solid #D3262E;outline-offset:2px}
+.rv-stars{display:inline-flex;flex-direction:row-reverse;gap:4px}.rv-stars input{position:absolute;opacity:0}.rv-stars label{font-size:38px;line-height:1;color:#E9D7B5;cursor:pointer;transition:color .15s}
+.rv-stars label:hover,.rv-stars label:hover~label,.rv-stars input:checked~label{color:#F2A900}.rv-stars input:focus-visible+label{outline:3px solid #D3262E;border-radius:6px}
+.field textarea{border:2px solid #EAD9B8;border-radius:14px;padding:12px 16px;font-size:16px;font-family:'Lexend',sans-serif;resize:vertical;outline:none;min-height:110px}.field textarea:focus{border-color:#D3262E}
+@media (max-width:820px){#rev-box{grid-template-columns:1fr!important;padding:22px!important}.rv-two{grid-template-columns:1fr!important}}
 .field{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600;color:#4A2A10}
 .field input{min-height:50px;border:2px solid #EAD9B8;border-radius:14px;padding:0 16px;font-size:17px;font-family:'Lexend',sans-serif;background:#fff;color:#2B1A0E;outline:none}
 .field input:focus{border-color:#D3262E}
@@ -210,9 +216,29 @@ img{max-width:100%}
 <span id="rev-summary" style="color:#6B4A2E;font-size:16px"></span>
 </div>
 <div class="grid3" id="reviews"></div>
-<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:#fff;border-radius:22px;padding:20px 24px;box-shadow:0 1px 0 #EAD9B8,0 10px 30px rgba(60,36,12,.06)">
-<span style="font-size:16px;line-height:1.5;max-width:560px">Já provou nosso mel? Conta pra gente como foi. Sua avaliação pode aparecer aqui.</span>
-<div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-red" id="rev-wa" href="#" target="_blank" rel="noopener">Avaliar pelo WhatsApp</a><a class="btn btn-line" href="https://instagram.com/fornoelenha.alimentos" target="_blank" rel="noopener">Marcar no Instagram</a></div>
+<div id="rev-box" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:28px;background:#fff;border-radius:28px;padding:30px;box-shadow:0 1px 0 #EAD9B8,0 10px 30px rgba(60,36,12,.07)">
+<div style="display:flex;flex-direction:column;gap:12px">
+<span class="eyebrow">Sua vez</span>
+<span class="serif" style="font-size:30px;font-weight:900;line-height:1.1">Já provou? Deixe sua avaliação.</span>
+<span style="font-size:16px;color:#6B4A2E;line-height:1.55">Conta pra gente o que achou. Sua avaliação aparece aqui no site depois que a nossa equipe conferir.</span>
+<span style="font-size:14px;color:#6B4A2E;margin-top:6px">Prefere mandar de outro jeito?</span>
+<div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-line" id="rev-wa" href="#" target="_blank" rel="noopener">Pelo WhatsApp</a><a class="btn btn-line" href="https://instagram.com/fornoelenha.alimentos" target="_blank" rel="noopener">No Instagram</a></div>
+</div>
+<form id="rev-new" novalidate style="display:flex;flex-direction:column;gap:14px">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px" class="rv-two">
+<label class="field">Seu nome<input name="nome" maxlength="60" autocomplete="name" placeholder="Ex.: Maria S."><small data-err="nome"></small></label>
+<label class="field">Cidade<input name="cidade" maxlength="60" autocomplete="address-level2" placeholder="Ex.: São Paulo/SP"><small></small></label>
+</div>
+<fieldset style="border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:8px"><legend class="field" style="padding:0;margin-bottom:8px">Qual mel você provou?</legend>
+<div style="display:flex;gap:8px;flex-wrap:wrap" id="rv-mel"><label class="rv-chip"><input type="radio" name="mel" value="silvestre"><span>Silvestre</span></label><label class="rv-chip"><input type="radio" name="mel" value="organico"><span>Silvestre Orgânico</span></label><label class="rv-chip"><input type="radio" name="mel" value="melato"><span>Melato da Bracatinga</span></label></div></fieldset>
+<fieldset style="border:0;padding:0;margin:0"><legend class="field" style="padding:0;margin-bottom:6px">Sua nota</legend>
+<div class="rv-stars" role="radiogroup"><input type="radio" id="rs5" name="nota" value="5"><label for="rs5" title="5 estrelas">★</label><input type="radio" id="rs4" name="nota" value="4"><label for="rs4" title="4 estrelas">★</label><input type="radio" id="rs3" name="nota" value="3"><label for="rs3" title="3 estrelas">★</label><input type="radio" id="rs2" name="nota" value="2"><label for="rs2" title="2 estrelas">★</label><input type="radio" id="rs1" name="nota" value="1"><label for="rs1" title="1 estrela">★</label></div>
+<small data-err="nota" style="color:#A81C22;font-size:13px"></small></fieldset>
+<label class="field">Seu comentário<textarea name="texto" maxlength="600" rows="4" placeholder="O que você achou do sabor, da embalagem, da entrega…"></textarea><small data-err="texto"></small></label>
+<label style="position:absolute;left:-9999px" aria-hidden="true">Não preencha<input name="site" tabindex="-1" autocomplete="off"></label>
+<button type="submit" class="btn btn-red" style="align-self:flex-start">Enviar avaliação</button>
+<span id="rv-status" role="status" style="font-size:15px"></span>
+</form>
 </div>
 </div>
 </section>
@@ -614,26 +640,37 @@ function renderRecipes(){
 /* AVALIAÇÕES — para publicar uma nova, adicione um item no topo da lista (só avaliações reais de clientes):
    { nome: 'Nome S.', cidade: 'Cidade/UF', mel: 'silvestre' | 'organico' | 'melato', nota: 1 a 5, texto: '...', data: 'AAAA-MM-DD' } */
 var REVIEWS = [];
-/* PRÉVIA: comentários fictícios só para ver o layout. Na versão final, REVIEWS_DEMO = false. */
-var REVIEWS_DEMO = false;
-if(REVIEWS_DEMO && !REVIEWS.length) REVIEWS = [
- { nome: 'Cliente Exemplo 1', cidade: 'São Paulo/SP', mel: 'melato', nota: 5, texto: 'Texto de exemplo: aqui aparece o comentário do cliente contando o que achou do mel, da embalagem e da entrega.', data: '2026-11-20' },
- { nome: 'Cliente Exemplo 2', cidade: 'Campinas/SP', mel: 'silvestre', nota: 5, texto: 'Texto de exemplo: um comentário mais curto também fica bonito no cartão.', data: '2026-11-18' },
- { nome: 'Cliente Exemplo 3', cidade: 'Florianópolis/SC', mel: 'organico', nota: 4, texto: 'Texto de exemplo: as estrelas mostram a nota que o cliente deu, de 1 a 5, e a etiqueta mostra qual mel ele comprou.', data: '2026-11-15' }
-];
 
+
+var REV_API='api/avaliacoes.php',REV_LOADED=[],REV_T0=Date.now();
+function loadReviews(){try{fetch(REV_API,{cache:'no-store'}).then(function(r){return r.ok?r.json():[];}).then(function(d){if(Array.isArray(d)&&d.length){REV_LOADED=d;renderReviews();}}).catch(function(){});}catch(e){}}
+function submitReview(ev){ev.preventDefault();var f=ev.target,st=document.getElementById('rv-status'),btn=f.querySelector('button[type=submit]');
+ var d={nome:f.nome.value.trim(),cidade:f.cidade.value.trim(),mel:(f.querySelector('input[name=mel]:checked')||{}).value||'',nota:+((f.querySelector('input[name=nota]:checked')||{}).value||0),texto:f.texto.value.trim(),site:f.site.value,t:Date.now()-REV_T0};
+ var err={};if(d.nome.length<2)err.nome='Digite seu nome.';if(!d.nota)err.nota='Escolha de 1 a 5 estrelas.';if(d.texto.length<10)err.texto='Escreva um pouquinho mais (mínimo 10 letras).';
+ Array.prototype.forEach.call(f.querySelectorAll('[data-err]'),function(x){x.textContent=err[x.getAttribute('data-err')]||'';x.style.color='#A81C22';});
+ if(Object.keys(err).length)return;
+ btn.disabled=true;st.style.color='#6B4A2E';st.textContent='Enviando…';
+ fetch(REV_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).then(function(r){return r.json().then(function(j){return {s:r.status,j:j};});}).then(function(x){
+  btn.disabled=false;
+  if(x.j&&x.j.ok){f.reset();st.style.color='#1F6B2A';st.textContent='Obrigado! Recebemos sua avaliação. Ela aparece aqui depois que a nossa equipe conferir.';}
+  else if(x.s===429){st.style.color='#A81C22';st.textContent='Você já enviou algumas avaliações agora. Tente de novo mais tarde.';}
+  else if(x.j&&x.j.erros&&x.j.erros.indexOf('link')>-1){st.style.color='#A81C22';st.textContent='Por segurança, não aceitamos links no comentário.';}
+  else{st.style.color='#A81C22';st.textContent='Confira os campos e tente de novo.';}
+ }).catch(function(){btn.disabled=false;st.style.color='#A81C22';st.textContent='Não conseguimos enviar agora. Tente de novo ou mande pelo WhatsApp.';});
+}
 function renderReviews(){
  var box=document.getElementById('reviews'),sum=document.getElementById('rev-summary');
+ var LIST=REV_LOADED.concat(REVIEWS).sort(function(a,b){return (b.data||'').localeCompare(a.data||'');});
  document.getElementById('rev-wa').href=wa('Oi! Quero deixar minha avaliação do mel Forno & Lenha: ');
- if(!REVIEWS.length){
+ if(!LIST.length){
   box.style.display='block';
   box.innerHTML='<div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;background:#FFF0C2;border-radius:26px;padding:28px;border:2px dashed #E8B84A"><img class="jar2" src="img/abelha-lenha.webp?v=3" alt="" aria-hidden="true" style="width:110px;height:auto"><div style="display:flex;flex-direction:column;gap:8px;flex:1;min-width:220px"><span class="serif" style="font-size:24px;font-weight:800;color:#2B1A0E">As primeiras avaliações estão chegando.</span><span style="font-size:16px;color:#6B4A2E;line-height:1.55">Estamos reunindo os comentários de quem já levou nosso mel pra casa. Seja um dos primeiros a contar o que achou.</span></div></div>';
   sum.textContent='';return;
  }
  box.style.display='';
- var media=REVIEWS.reduce(function(a,r){return a+r.nota;},0)/REVIEWS.length;
- sum.innerHTML=(REVIEWS_DEMO?'<span style="background:#D3262E;color:#fff;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:700;margin-right:8px">PRÉVIA · comentários de exemplo</span>':'')+'Nota média '+media.toFixed(1).replace('.',',')+' de 5 · '+REVIEWS.length+(REVIEWS.length>1?' avaliações':' avaliação');
- box.innerHTML=REVIEWS.slice(0,6).map(function(r){
+ var media=LIST.reduce(function(a,r){return a+r.nota;},0)/LIST.length;
+ sum.innerHTML='Nota média '+media.toFixed(1).replace('.',',')+' de 5 · '+LIST.length+(LIST.length>1?' avaliações':' avaliação');
+ box.innerHTML=LIST.slice(0,9).map(function(r){
   var p=prod(r.mel),st='';for(var i=0;i<5;i++)st+='<span style="color:'+(i<r.nota?'#F2A900':'#E9D7B5')+'">★</span>';
   return '<article style="background:#fff;border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:14px;box-shadow:0 1px 0 #EAD9B8,0 10px 30px rgba(60,36,12,.07)"><span style="font-size:22px;letter-spacing:2px" aria-label="Nota '+r.nota+' de 5">'+st+'</span><p style="margin:0;font-size:16px;line-height:1.6">“'+esc(r.texto)+'”</p><div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;flex-wrap:wrap"><span style="font-weight:700">'+esc(r.nome)+'<span style="font-weight:400;color:#6B4A2E"> · '+esc(r.cidade)+'</span></span>'+(p?'<span style="font-size:13px;background:#FFF4D6;border-radius:999px;padding:5px 11px">'+p.name+'</span>':'')+'</div></article>';
  }).join('');
@@ -709,6 +746,8 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')openCart(fal
 document.getElementById('trio-price').textContent=money(PRODUCTS.reduce(function(a,p){return a+p.prices.b250;},0));
 document.getElementById('checkout').addEventListener('submit',submitCheckout);
 document.getElementById('rev-form').addEventListener('submit',submitRevenda);
+document.getElementById('rev-new').addEventListener('submit',submitReview);
+loadReviews();
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!document.getElementById('rev-modal').classList.contains('hidden'))showRevenda(false);});
 document.getElementById('ck-nome').addEventListener('input',function(){document.getElementById('ck-nome-msg').textContent='';});
 var ckc=document.getElementById('ck-cep');ckc.addEventListener('input',function(){ckc.value=fmtCep(ckc.value);lookupCep();});

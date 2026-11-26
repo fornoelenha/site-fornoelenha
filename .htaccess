@@ -1,0 +1,5 @@
+# Bloqueia arquivos internos do Git
+RedirectMatch 404 /\.git
+<FilesMatch "^(README\.md)$">
+  Require all denied
+</FilesMatch>
