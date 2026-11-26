@@ -48,6 +48,19 @@ else {
             elseif (mb_strlen($_POST['nova'] ?? '') < 8) $erro = 'A nova senha precisa ter pelo menos 8 caracteres.';
             else { fl_write('painel.json', ['senha' => password_hash($_POST['nova'], PASSWORD_DEFAULT)]); $msg = 'Senha trocada.'; }
         }
+        if ($acao === 'frete') {
+            $f = fl_read('frete.json', []);
+            $tok = trim($_POST['token'] ?? '');
+            if ($tok !== '') $f['token'] = $tok;
+            if (!empty($_POST['apagar_token'])) unset($f['token']);
+            $f['cep_origem'] = preg_replace('/\D/', '', $_POST['cep_origem'] ?? '');
+            $f['email'] = trim($_POST['email'] ?? '');
+            $f['acrescimo'] = (float)str_replace(',', '.', $_POST['acrescimo'] ?? '0');
+            $f['dias_extra'] = (int)($_POST['dias_extra'] ?? 0);
+            $f['sandbox'] = !empty($_POST['sandbox']);
+            if ($f['cep_origem'] !== '' && strlen($f['cep_origem']) !== 8) $erro = 'O CEP de origem precisa ter 8 números.';
+            else { fl_write('frete.json', $f); $msg = 'Configuração de frete salva.'; }
+        }
         if (in_array($acao, ['aprovar', 'ocultar', 'apagar'], true)) {
             fl_update('avaliacoes.json', [], function ($all) use ($acao, $id) {
                 foreach ($all as $k => $r) if (($r['id'] ?? '') === $id) {
@@ -118,6 +131,18 @@ button{min-height:42px;border-radius:999px;border:2px solid transparent;padding:
 <?php if (!$pend): ?><p class="empty">Nenhuma avaliação nova.</p><?php endif; ?></section>
 <section><h2>No site (<?= count($apr) ?>)</h2><div class="grid" style="margin-top:12px"><?php foreach ($apr as $r) echo card($r, $csrf, true); ?></div>
 <?php if (!$apr): ?><p class="empty">Nenhuma publicada ainda.</p><?php endif; ?></section>
+<?php $fr = fl_read('frete.json', []); ?>
+<details<?= empty($fr['token']) ? ' open' : '' ?>><summary>Frete (Melhor Envio) · <?= !empty($fr['token']) && !empty($fr['cep_origem']) ? 'ligado' : 'desligado' ?></summary>
+<form method="post" style="display:flex;flex-direction:column;gap:10px;margin-top:12px;max-width:460px"><input type="hidden" name="csrf" value="<?= h($csrf) ?>">
+<p class="empty" style="margin:0">Vale só para fora da capital de SP. Na capital o site usa a entrega própria (R$ 20, grátis acima de R$ 100).</p>
+<label>Token do Melhor Envio <?= !empty($fr['token']) ? '(já salvo; deixe em branco para manter)' : '' ?><input type="password" name="token" autocomplete="off"></label>
+<?php if (!empty($fr['token'])): ?><label style="flex-direction:row;align-items:center;gap:8px;font-weight:400"><input type="checkbox" name="apagar_token" value="1" style="min-height:0"> Apagar o token salvo</label><?php endif; ?>
+<label>CEP de onde o mel sai<input name="cep_origem" inputmode="numeric" value="<?= h($fr['cep_origem'] ?? '') ?>" placeholder="00000000"></label>
+<label>E-mail da conta do Melhor Envio<input type="email" name="email" value="<?= h($fr['email'] ?? '') ?>"></label>
+<label>Somar ao frete (R$, para embalagem)<input name="acrescimo" inputmode="decimal" value="<?= h($fr['acrescimo'] ?? '0') ?>"></label>
+<label>Dias a mais no prazo (tempo para despachar)<input name="dias_extra" inputmode="numeric" value="<?= h($fr['dias_extra'] ?? '1') ?>"></label>
+<label style="flex-direction:row;align-items:center;gap:8px;font-weight:400"><input type="checkbox" name="sandbox" value="1" style="min-height:0" <?= !empty($fr['sandbox']) ? 'checked' : '' ?>> Token de teste (sandbox)</label>
+<button name="acao" value="frete" class="red">Salvar frete</button></form></details>
 <details><summary>Trocar senha</summary><form method="post" style="display:flex;flex-direction:column;gap:10px;margin-top:12px;max-width:360px"><input type="hidden" name="csrf" value="<?= h($csrf) ?>">
 <label>Senha atual<input type="password" name="atual" autocomplete="current-password"></label><label>Nova senha<input type="password" name="nova" autocomplete="new-password"></label>
 <button name="acao" value="senha" class="line">Trocar senha</button></form></details>

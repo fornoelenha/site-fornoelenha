@@ -6,6 +6,23 @@ if (!defined('FL_LIB')) { define('FL_LIB', 1); } else { return; }
 // Código de primeira configuração do painel (só serve até a senha ser criada).
 const FL_SETUP_HASH = '$2y$10$js7w/TuA6PX8uevJdYmyOOM6Z/bV718O91cSX1m0M1bz5.pXSk4g2';
 date_default_timezone_set('America/Sao_Paulo');
+
+// Medidas de cada embalagem JÁ EMBALADA para envio (cm e kg) e valor declarado (R$).
+// ESTIMATIVAS: troque pelos números medidos quando tiver.
+const FL_PACOTES = [
+    'silvestre-b250' => ['a' => 18, 'l' => 8,  'c' => 8,  'kg' => 0.40, 'valor' => 24.5],
+    'silvestre-b500' => ['a' => 21, 'l' => 9,  'c' => 9,  'kg' => 0.70, 'valor' => 42],
+    'silvestre-p500' => ['a' => 12, 'l' => 11, 'c' => 11, 'kg' => 0.80, 'valor' => 45],
+    'silvestre-p1kg' => ['a' => 15, 'l' => 13, 'c' => 13, 'kg' => 1.40, 'valor' => 69],
+    'organico-b250'  => ['a' => 18, 'l' => 8,  'c' => 8,  'kg' => 0.40, 'valor' => 29.5],
+    'organico-b500'  => ['a' => 21, 'l' => 9,  'c' => 9,  'kg' => 0.70, 'valor' => 47],
+    'organico-p500'  => ['a' => 12, 'l' => 11, 'c' => 11, 'kg' => 0.80, 'valor' => 49],
+    'organico-p1kg'  => ['a' => 15, 'l' => 13, 'c' => 13, 'kg' => 1.40, 'valor' => 78],
+    'melato-b250'    => ['a' => 18, 'l' => 8,  'c' => 8,  'kg' => 0.40, 'valor' => 39],
+    'melato-b500'    => ['a' => 21, 'l' => 9,  'c' => 9,  'kg' => 0.70, 'valor' => 56],
+    'melato-p500'    => ['a' => 12, 'l' => 11, 'c' => 11, 'kg' => 0.80, 'valor' => 59],
+    'melato-p1kg'    => ['a' => 15, 'l' => 13, 'c' => 13, 'kg' => 1.40, 'valor' => 89],
+];
 const FL_MELS = ['silvestre' => 'Mel Silvestre', 'organico' => 'Mel Silvestre Orgânico', 'melato' => 'Melato da Bracatinga'];
 
 function fl_data_dir(): string {
