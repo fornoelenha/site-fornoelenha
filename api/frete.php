@@ -52,7 +52,12 @@ $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
 
 $lista = json_decode((string)$raw, true);
-if ($code !== 200 || !is_array($lista)) { http_response_code(502); echo '{"ok":false,"motivo":"melhor_envio"}'; exit; }
+if ($code !== 200 || !is_array($lista)) {
+    $det = is_array($lista) ? ($lista['message'] ?? '') : '';
+    if (is_array($lista) && isset($lista['errors'])) $det .= ' ' . json_encode($lista['errors'], JSON_UNESCAPED_UNICODE);
+    fl_write('frete_ultimo_erro.json', ['quando' => date('c'), 'cep' => $cep, 'http' => $code, 'detalhe' => mb_substr(trim($det), 0, 400)]);
+    http_response_code(502); echo json_encode(['ok' => false, 'motivo' => 'melhor_envio', 'http' => $code, 'detalhe' => mb_substr(trim($det), 0, 300)], JSON_UNESCAPED_UNICODE); exit;
+}
 
 $opcoes = [];
 foreach ($lista as $s) {
