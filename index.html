@@ -819,6 +819,7 @@ document.getElementById('ck-nome').addEventListener('input',function(){document.
 var ckc=document.getElementById('ck-cep');ckc.addEventListener('input',function(){ckc.value=fmtCep(ckc.value);lookupCep();});
 Array.prototype.forEach.call(document.querySelectorAll('.wa-duvida'),function(a){a.href=wa('Olá! Vim pelo site da Forno & Lenha e tenho uma dúvida sobre os méis.');});
 loadStock();
+if(/[?&]carrinho=1/.test(location.search)){openCart(true);try{history.replaceState(null,'',location.pathname+location.hash);}catch(e){}}
 Array.prototype.forEach.call(document.querySelectorAll('.wa-contato'),function(a){a.href=wa('Olá, Forno & Lenha! Vim pelo site.');});
 renderProducts();renderCart();renderQuiz();renderSteps();renderCmp();renderCurios();renderRecipes();renderReviews();renderFaqs();
 </script>

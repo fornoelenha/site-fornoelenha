@@ -17,12 +17,13 @@
 <style>
 *{box-sizing:border-box}body{margin:0;background:#FFF8EA;font-family:'Lexend',system-ui,sans-serif;color:#2B1A0E}
 a{color:#A81C22}a:hover{color:#7E1218}.serif{font-family:'Fraunces',Georgia,serif}
-.wrap{max-width:1180px;margin:0 auto}
-header{position:sticky;top:0;z-index:50;background:#FFC61A;border-bottom:3px solid #D3262E}
-header nav{padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.wrap{max-width:1280px;margin:0 auto}
+header{position:sticky;top:0;z-index:50;background:rgba(255,198,26,.97);backdrop-filter:blur(10px);border-bottom:3px solid #D3262E}
+header nav{padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.cartbtn{min-height:46px;padding:0 18px}.cc{background:#FFC61A;color:#2B1A0E;border-radius:999px;min-width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;padding:0 7px;font-weight:700}
 .links{display:flex;gap:6px;flex-wrap:wrap}
 .navlink{color:#2B1A0E;text-decoration:none;font-weight:500;font-size:15px;padding:9px 16px;border-radius:999px;transition:background .2s,color .2s}
-.navlink:hover,.navlink.on{color:#fff;background:#D3262E}
+.navlink:hover,.navlink.on{color:#fff;background:#D3262E;box-shadow:0 6px 16px rgba(168,28,34,.28)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 26px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;border:0;cursor:pointer;font-family:'Lexend',sans-serif}
 .btn-red{background:#D3262E;color:#fff;box-shadow:0 10px 24px rgba(211,38,46,.32)}.btn-red:hover{background:#B81F27;color:#fff}
 .btn-line{background:#fff;color:#2B1A0E;border:2px solid #2B1A0E}.btn-line:hover{color:#D3262E;border-color:#D3262E}
@@ -51,16 +52,18 @@ footer a{color:#FFC61A}
 .wa-float{position:fixed;right:20px;bottom:20px;z-index:55}
 .wa-float span{width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(0,0,0,.28)}
 @media (max-width:900px){.grid{grid-template-columns:1fr 1fr}}
-@media (max-width:620px){.grid{grid-template-columns:1fr}.links{order:3;width:100%;overflow-x:auto;flex-wrap:nowrap}.navlink{padding:7px 12px;font-size:14px;white-space:nowrap}.corpo{font-size:17px}}
+@media (max-width:1000px){header nav{row-gap:0;padding-top:6px;padding-bottom:0}.links{order:3;width:100%;overflow-x:auto;flex-wrap:nowrap;gap:4px;padding:2px 0 6px;scrollbar-width:none}.links::-webkit-scrollbar{display:none}.navlink{padding:7px 12px;font-size:14px;white-space:nowrap}}
+@media (max-width:620px){.grid{grid-template-columns:1fr}.corpo{font-size:17px}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Melato da bracatinga: o que é e por que esse mel é tão escuro", "description": "O melato da bracatinga não vem das flores. Entenda como ele nasce na serra catarinense, por que é escuro e só aparece de dois em dois anos.", "datePublished": "2026-11-27", "dateModified": "2026-11-27", "image": "https://fornoelenhaalimentos.com.br/img/jornada-florada.jpg", "url": "https://fornoelenhaalimentos.com.br/blog/melato-da-bracatinga-o-que-e/", "inLanguage": "pt-BR", "author": {"@type": "Organization", "name": "Forno & Lenha Alimentos"}, "publisher": {"@type": "Organization", "name": "Forno & Lenha Alimentos", "logo": {"@type": "ImageObject", "url": "https://fornoelenhaalimentos.com.br/img/logo.png"}}, "mainEntityOfPage": "https://fornoelenhaalimentos.com.br/blog/melato-da-bracatinga-o-que-e/"}</script>
 </head>
 <body>
-<header><nav class="wrap">
-<a href="/" aria-label="Forno &amp; Lenha, página inicial"><img src="/img/logo.png?v=3" alt="Forno &amp; Lenha Alimentos" style="height:58px;width:auto;display:block"></a>
-<div class="links"><a class="navlink" href="/#loja">Nossos méis</a><a class="navlink" href="/#receitas">Receitas</a><a class="navlink" href="/#curiosidades">Curiosidades</a><a class="navlink on" href="/blog/">Blog</a></div>
-<a class="btn btn-red" href="/#loja" style="min-height:44px;padding:0 20px;font-size:15px">Comprar mel</a>
+<header><nav class="wrap" aria-label="Principal">
+<a href="/" aria-label="Forno &amp; Lenha Alimentos, início" style="display:flex;align-items:center"><img src="/img/logo.png?v=3" alt="Forno &amp; Lenha Alimentos" style="height:68px;width:auto;display:block;filter:drop-shadow(0 3px 6px rgba(120,40,10,.25))"></a>
+<div class="links"><a class="navlink" href="/#loja">Nossos méis</a><a class="navlink" href="/#quiz">Qual é o seu?</a><a class="navlink" href="/#jornada">Da flor ao pote</a><a class="navlink" href="/#receitas">Receitas</a><a class="navlink" href="/#curiosidades">Curiosidades</a><a class="navlink on" href="/blog/">Blog</a></div>
+<a class="btn btn-red cartbtn" href="/?carrinho=1" aria-label="Abrir carrinho"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6 5 3H2"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg><span>Carrinho</span><span class="cc" id="cc">0</span></a>
 </nav></header>
+<script>try{var c=JSON.parse(localStorage.getItem('fl_cart')||'{}'),n=0;for(var k in c)n+=c[k];document.getElementById('cc').textContent=n;}catch(e){}</script>
 <main><article class="post"><a href="/blog/" style="font-size:15px;font-weight:600;text-decoration:none">← Todos os posts</a><div style="margin-top:18px"><span class="tag">Guia do mel</span></div><h1>Melato da bracatinga: o que é e por que esse mel é tão escuro</h1><p class="lead">O melato da bracatinga não vem das flores. Entenda como ele nasce na serra catarinense, por que é escuro e só aparece de dois em dois anos.</p><span class="meta">27 de novembro de 2026 · 3 min de leitura · Equipe Forno &amp; Lenha</span><img class="capa" src="/img/jornada-florada.jpg" alt=""><div class="corpo"><p>O melato da bracatinga é um mel diferente de quase tudo que você já provou. Ele <strong>não é feito do néctar das flores</strong>: nasce de uma parceria entre uma árvore da serra, um pequeno inseto e as abelhas. O resultado é um mel escuro, encorpado e menos doce, produzido em pouquíssimos lugares do mundo.</p>
 <h2>De onde vem o melato da bracatinga</h2>
 <p>Tudo começa na <strong>bracatinga</strong> (<em>Mimosa scabrella</em>), uma árvore nativa do Sul do Brasil, muito comum no Planalto Sul, a região alta que reúne municípios de Santa Catarina, do Paraná e do Rio Grande do Sul.</p>
