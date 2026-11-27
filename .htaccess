@@ -3,3 +3,13 @@ RedirectMatch 404 /\.git
 <FilesMatch "^(README\.md)$">
   Require all denied
 </FilesMatch>
+
+# Páginas sempre conferem a versão nova (as imagens têm ?v= e podem ficar em cache)
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|php)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.(webp|jpg|jpeg|png|svg)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>
