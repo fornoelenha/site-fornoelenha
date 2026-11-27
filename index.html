@@ -583,8 +583,8 @@ function save(){try{localStorage.setItem('fl_cart',JSON.stringify(S.cart));}catc
 var S={cart:load(),sel:{silvestre:'p500',organico:'p500',melato:'p500'},tabs:{silvestre:'sabor',organico:'sabor',melato:'sabor'},quizStep:0,quizScores:{silvestre:0,organico:0,melato:0},step:0,filter:'Todas',openRecipe:'',flipped:{},faqOpen:0};
 var IMGH={b250:'230px',b500:'270px',p500:'250px',p1kg:'250px'};
 
-function renderProducts(){
- document.getElementById('products').innerHTML=PRODUCTS.map(function(p){
+function renderProducts(only,prevImg){
+ var box=document.getElementById('products');var cards=PRODUCTS.map(function(p){
   var sid=S.sel[p.id],key=p.id+'|'+sid,qty=S.cart[key]||0,tab=S.tabs[p.id];
   var sizes=SIZES.map(function(s){var st=stockOf(p.id,s[0]),out=st!==null&&st<=0,low=st!==null&&st>0&&st<=STOCK_LIMIT;return '<button class="pill'+(s[0]===sid?' on':'')+(out?' out':'')+'" aria-pressed="'+(s[0]===sid)+'" data-action="size" data-p="'+p.id+'" data-s="'+s[0]+'">'+s[1]+(out?'<small>Esgotado</small>':low?'<small class="low">Restam '+st+'</small>':'<small>'+money(p.prices[s[0]])+'</small>')+'</button>';}).join('');
   var selSt=stockOf(p.id,sid),selOut=selSt!==null&&selSt<=0,selLow=selSt!==null&&selSt>0&&selSt<=STOCK_LIMIT;
@@ -599,7 +599,11 @@ function renderProducts(){
   '<p style="margin:0;color:#4A3220;font-size:15px;line-height:1.6">'+p.desc+'</p><div class="sizes">'+sizes+'</div><div style="display:flex;gap:8px;flex-wrap:wrap">'+tabs+'</div>'+
   '<p style="margin:0;min-height:52px;font-size:15px;line-height:1.55;background:#FFF4D6;padding:14px 16px;border-radius:14px">'+p.tabs[tab]+'</p><div style="display:flex;flex-direction:column;gap:9px">'+meters+'</div>'+
   '<div style="margin-top:auto;padding-top:18px;border-top:2px dashed #EAD9B8;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap"><div style="display:flex;flex-direction:column"><span style="font-size:13px;color:#6B4A2E">'+sizeName(sid)+'</span><span class="serif" style="font-size:30px;font-weight:900;color:#A81C22;line-height:1.1">'+money(p.prices[sid])+'</span>'+(selLow?'<span class="stock-tag">Restam só '+selSt+(selSt>1?' unidades':' unidade')+'</span>':selOut?'<span class="stock-tag">Esgotado no momento</span>':'')+'</div>'+buy+'</div></div></article>';
- }).join('');
+ });
+ if(only&&box.children.length===PRODUCTS.length){var idx=PRODUCTS.map(function(x){return x.id;}).indexOf(only);if(idx>-1){var tmp=document.createElement('div');tmp.innerHTML=cards[idx];var nw=tmp.firstElementChild,old=box.children[idx];
+  if(prevImg){var im=nw.querySelector('img.swap');if(im&&im.getAttribute('src')===prevImg)im.classList.remove('swap');}
+  box.replaceChild(nw,old);return;}}
+ box.innerHTML=cards.join('');
 }
 
 function renderCart(){
@@ -760,15 +764,15 @@ function canAdd(k,n){var pr=k.split('|'),st=stockOf(pr[0],pr[1]);if(st===null)re
 function loadStock(){if(!STOCK_API)return;try{fetch(STOCK_API+(STOCK_API.indexOf('?')>-1?'&':'?')+'acao=estoque',{cache:'no-store'}).then(function(r){return r.json();}).then(function(d){if(!d||!d.estoque)return;STOCK=d.estoque;if(d.limite)STOCK_LIMIT=d.limite;var cut=false;Object.keys(S.cart).forEach(function(k){var pr=k.split('|'),st=stockOf(pr[0],pr[1]);if(st!==null&&S.cart[k]>st){cut=true;if(st<=0)delete S.cart[k];else S.cart[k]=st;}});renderProducts();renderCart();if(cut)toast('Ajustamos seu carrinho ao estoque disponível');}).catch(function(){});}catch(e){}}
 function orderCode(){var d=new Date();function z(n){return (n<10?'0':'')+n;}return 'FL'+String(d.getFullYear()).slice(2)+z(d.getMonth()+1)+z(d.getDate())+'-'+Math.random().toString(36).slice(2,6).toUpperCase();}
 function amazonUrl(){var i=0,parts=[],missing=0;Object.keys(S.cart).forEach(function(k){var pr=k.split('|'),asin=AMAZON_ASIN[pr[0]+'-'+pr[1]];if(asin){i++;parts.push('ASIN.'+i+'='+encodeURIComponent(asin)+'&Quantity.'+i+'='+S.cart[k]);}else missing++;});return {url:parts.length?'https://www.amazon.com.br/gp/aws/cart/add.html?'+parts.join('&'):'',missing:missing};}
-function add(pid,sid){var k=pid+'|'+sid;if(!canAdd(k,1))return;S.cart[k]=(S.cart[k]||0)+1;renderCart();renderProducts();toast(prod(pid).name+' '+sizeName(sid).toLowerCase()+' no carrinho');}
+function add(pid,sid){var k=pid+'|'+sid;if(!canAdd(k,1))return;S.cart[k]=(S.cart[k]||0)+1;renderCart();var pp=prod(pid);renderProducts(pid,pp&&pp.imgs[sid]);toast(prod(pid).name+' '+sizeName(sid).toLowerCase()+' no carrinho');}
 function openCart(o){document.getElementById('cart').classList.toggle('hidden',!o);document.getElementById('toast').classList.add('hidden');document.body.style.overflow=o?'hidden':'';}
 
 document.addEventListener('click',function(e){
  var el=e.target.closest('[data-action]');if(!el)return;var a=el.dataset.action,d=el.dataset;
- if(a==='size'){S.sel[d.p]=d.s;renderProducts();}
- else if(a==='tab'){S.tabs[d.p]=d.t;renderProducts();}
+ if(a==='size'){if(S.sel[d.p]===d.s)return;S.sel[d.p]=d.s;renderProducts(d.p);}
+ else if(a==='tab'){S.tabs[d.p]=d.t;var pp=prod(d.p);renderProducts(d.p,pp&&pp.imgs[S.sel[d.p]]);}
  else if(a==='add'){add(d.p,d.s);}
- else if(a==='qty'){if(Number(d.d)>0&&!canAdd(d.k,1))return;var q=(S.cart[d.k]||0)+Number(d.d);if(q<=0)delete S.cart[d.k];else S.cart[d.k]=q;renderCart();renderProducts();}
+ else if(a==='qty'){if(Number(d.d)>0&&!canAdd(d.k,1))return;var q=(S.cart[d.k]||0)+Number(d.d);if(q<=0)delete S.cart[d.k];else S.cart[d.k]=q;renderCart();var kp=d.k.split('|'),pp=prod(kp[0]);renderProducts(kp[0],pp&&pp.imgs[kp[1]]);}
  else if(a==='amazon'){e.preventDefault();var az=amazonUrl();if(az.url){window.open(az.url,'_blank');if(az.missing)toast('Alguns itens ainda não estão na Amazon. Finalize esses pelo WhatsApp.');}else if(AMAZON_URL){window.open(AMAZON_URL,'_blank');}else{toast('Loja na Amazon em breve');}}
  else if(a==='add-trio'){PRODUCTS.forEach(function(p){var k=p.id+'|b250',st=stockOf(p.id,'b250');if(st!==null&&(S.cart[k]||0)+1>st)return;S.cart[k]=(S.cart[k]||0)+1;});renderCart();renderProducts();toast('Trio de degustação no carrinho');}
  else if(a==='open-cart'){openCart(true);}
