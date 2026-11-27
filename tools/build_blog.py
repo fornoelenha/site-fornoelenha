@@ -139,7 +139,7 @@ a{color:#A81C22}a:hover{color:#7E1218}.serif{font-family:'Fraunces',Georgia,seri
 .wrap{max-width:1280px;margin:0 auto}
 header{position:sticky;top:0;z-index:50;background:rgba(255,198,26,.97);backdrop-filter:blur(10px);border-bottom:3px solid #D3262E}
 header nav{padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.cartbtn{min-height:46px;padding:0 18px}.cc{background:#FFC61A;color:#2B1A0E;border-radius:999px;min-width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;padding:0 7px;font-weight:700}
+.btn.cartbtn{min-height:46px;padding:0 18px}.cc{background:#FFC61A;color:#2B1A0E;border-radius:999px;min-width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;padding:0 7px;font-weight:700}
 .links{display:flex;gap:6px;flex-wrap:wrap}
 .navlink{color:#2B1A0E;text-decoration:none;font-weight:500;font-size:15px;padding:9px 16px;border-radius:999px;transition:background .2s,color .2s}
 .navlink:hover,.navlink.on{color:#fff;background:#D3262E;box-shadow:0 6px 16px rgba(168,28,34,.28)}
