@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /painel-avaliacoes.php
+Disallow: /api/
+
+Sitemap: https://fornoelenhaalimentos.com.br/sitemap.xml
